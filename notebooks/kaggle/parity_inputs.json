@@ -1,0 +1,2638 @@
+[
+ {
+  "state": "lower leaves of my wheat are turning yellow from the tip, whole field looks pale",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_WATERLOG": "waterlogging: whole field or low patches turned yellow after heavy rain or over-irrigation with standing water, roots brown or black",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has water been standing in the field for more than a day recently?"
+   }
+  }
+ },
+ {
+  "state": "only the bottom leaves of my wheat are drying, rest of the plant is green",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_EXCESS_SALT": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the burning start within a few days of applying fertiliser?"
+   }
+  }
+ },
+ {
+  "state": "whole maize field turned yellow after heavy rain, water standing for 3 days",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_FAW": "fall armyworm: ragged holes and windows in young maize leaves, wet sawdust-like frass in the whorl, caterpillar with an inverted Y on its head",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Is there wet sawdust-like dirt (frass) inside the central whorl?"
+   }
+  }
+ },
+ {
+  "state": "maize leaves have ragged holes and sawdust in the whorl, caterpillars inside",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_MAIZE_STEMBORER": "maize stem borer: shot holes in a row across leaves, dead heart (central shoot dries and pulls out easily), tunnels in the stem",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Does the dried central shoot pull out easily?"
+   }
+  }
+ },
+ {
+  "state": "yellow powder in stripes on wheat leaves, it comes off on my fingers",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "potato leaves have black wet patches spreading fast after foggy days",
+  "crop": "potato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_EXCESS_SALT": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the burning start within a few days of applying fertiliser?"
+   }
+  }
+ },
+ {
+  "state": "white empty earheads in paddy that pull out easily",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "round patches of paddy drying and falling, many small brown insects at the base near water",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BLAST": "rice blast: diamond or eye-shaped spots with grey centre and brown border on leaves, neck of the panicle turns black and breaks",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the spots spindle or eye-shaped with a grey centre and brown edge?"
+   }
+  }
+ },
+ {
+  "state": "paddy leaves drying from the tip with wavy yellow edges after rain",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "rusty brown patches on young paddy leaves, plants stunted, khaira",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BLAST": "rice blast: diamond or eye-shaped spots with grey centre and brown border on leaves, neck of the panicle turns black and breaks",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the spots spindle or eye-shaped with a grey centre and brown edge?"
+   }
+  }
+ },
+ {
+  "state": "tomato lower leaves have brown spots with rings like a target",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BER": "blossom-end rot: dark sunken leathery patch at the bottom end of the fruit, caused by calcium not reaching the fruit with uneven watering",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Is the dark sunken patch always at the bottom (flower) end of the fruit?"
+   }
+  }
+ },
+ {
+  "state": "tomato young leaves small, curled up and crinkled, plant bushy, white flies around",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "tomato fruits have black sunken rot at the bottom end",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_CUTWORM": "cutworm: young plants cut off at ground level overnight, fat grey-brown caterpillars curled in the soil nearby, holes in potato tubers",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are young plants cut cleanly at the soil level overnight?"
+   }
+  }
+ },
+ {
+  "state": "tomato flowers are falling before fruits form, it is very hot",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "after a very cold night the potato leaves turned black (pala)",
+  "crop": "potato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_WHITEFLY": "whitefly: tiny white flies fly up when the plant is shaken, leaves yellow and sticky; spreads leaf curl virus",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do tiny white flies fly up when you shake the plant?"
+   }
+  }
+ },
+ {
+  "state": "my maize looks healthy and green, everything is fine, any tips",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_FE_DEF": "iron shortage: youngest leaves pale yellow to white with sharply green veins, common in high-pH or waterlogged soils and in hydroponics with high pH",
+     "C_S_DEF": "sulphur shortage: whole young leaves uniformly pale yellow-green including the veins, common in mustard, pulses and sandy soils",
+     "C_ZN_DEF": "zinc shortage: young leaves with rusty brown spots or white bands near the base (khaira in paddy, white bud in maize), stunted plants with short internodes",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the youngest leaves yellow-white with clearly green veins?"
+   }
+  }
+ },
+ {
+  "state": "young maize plants are stunted with purple lower leaves after cold weather",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "wheat leaves bleached and twisted three days after I sprayed weedicide",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_WATERLOG": "waterlogging: whole field or low patches turned yellow after heavy rain or over-irrigation with standing water, roots brown or black",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has water been standing in the field for more than a day recently?"
+   }
+  }
+ },
+ {
+  "state": "gehu ke neeche wale patte peele ho rahe hain, poora khet halka pada hai",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_WATERLOG": "waterlogging: whole field or low patches turned yellow after heavy rain or over-irrigation with standing water, roots brown or black",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has water been standing in the field for more than a day recently?"
+   }
+  }
+ },
+ {
+  "state": "मक्का की पत्तियों में छेद हैं और गोभ में सुंडी है",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_FROST": "frost or cold injury: leaves suddenly water-soaked then black or bleached after a very cold clear night in winter (pala)",
+     "C_HAIL_STORM": "hail or storm: leaves torn and shredded, bruised fruits, plants bent or lodged after a storm",
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did it appear suddenly after a very cold night?"
+   }
+  }
+ },
+ {
+  "state": "leaf tips burnt brown after I added more nutrients to the reservoir",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_K_DEF": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "C_MG_DEF": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "C_P_DEF": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the edges of the older leaves brown and dry while the centre stays green?"
+   }
+  }
+ },
+ {
+  "state": "clusters of tiny soft green insects (aphids) on the tender shoots of my tomato",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_EXCESS_SALT": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the burning start within a few days of applying fertiliser?"
+   }
+  }
+ },
+ {
+  "state": "spray karne ke baad chakkar aa rahe hain aur ulti ho rahi hai",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "fasal barbad ho gayi, ab mai atmahatya kar lunga",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_N_DEF": "nitrogen shortage: older lower leaves uniformly pale yellow from the tip along the midrib, whole crop pale and slow, needs urea",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the yellowing start on the older, lower leaves?"
+   }
+  }
+ },
+ {
+  "state": "what is the price of wheat in the mandi today",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_TERMITE": "termites: plants drying in patches, roots and stem base hollow and eaten, mud tunnels, worse in dry sandy soils and with raw manure",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do dried plants pull out easily with eaten roots and soil inside?"
+   }
+  }
+ },
+ {
+  "state": "Information about flower drop problem in Tomato crop ..?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_WHITEFLY": "whitefly: tiny white flies fly up when the plant is shaken, leaves yellow and sticky; spreads leaf curl virus",
+     "V_TOLCV": "tomato leaf curl virus: young leaves small, curled upward and crinkled, yellow edges, bushy stunted plants with few flowers, whiteflies present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do tiny white flies fly up when you shake the plant?"
+   }
+  }
+ },
+ {
+  "state": "Information about control of Termites in wheat crop",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_EXCESS_SALT": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the burning start within a few days of applying fertiliser?"
+   }
+  }
+ },
+ {
+  "state": "Information about control of sucking pests in wheat crops (SUCKING PEST-JASSIDS,WHITE FLY,APHIDS,THRIPS) ?",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_LOOSE_SMUT": "loose smut of wheat: earheads come out as black powdery masses instead of grains, the powder blows away leaving a bare stalk",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are whole earheads black powder instead of grain?"
+   }
+  }
+ },
+ {
+  "state": "Information about how to use of Zinc sulphate 48% (Liquid) in Paddy crop ...?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "Information about Control of Early Blight & Late Blight in Potato Crop..?",
+  "crop": "potato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_WHITEFLY": "whitefly: tiny white flies fly up when the plant is shaken, leaves yellow and sticky; spreads leaf curl virus",
+     "P_APHID": "aphids: colonies of tiny soft green or black insects on tender shoots, ears or under leaves, sticky honeydew and black sooty mould",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do tiny white flies fly up when you shake the plant?"
+   }
+  }
+ },
+ {
+  "state": "Provide About Control of Ghandhi Bug, white Mosquitoes & Grasshoppers in Paddy Crop.......?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "Information about control of BPH in paddy crop ?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "information about of flower drop in tomato plant ?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "Information about termite control in wheat crop",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_TERMITE": "termites: plants drying in patches, roots and stem base hollow and eaten, mud tunnels, worse in dry sandy soils and with raw manure",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do dried plants pull out easily with eaten roots and soil inside?"
+   }
+  }
+ },
+ {
+  "state": "Information about leaf curl virus in tomato crop..?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_FLOWER_DROP": "flower and fruit drop: flowers fall without setting fruit, often from heat above 35 degrees, cold nights, water stress, excess nitrogen or poor pollination",
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are flowers falling off before fruits form?"
+   }
+  }
+ },
+ {
+  "state": "Provide information related to sheath blight disease control in paddy crop ?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_K_DEF": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "C_MG_DEF": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "C_P_DEF": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the edges of the older leaves brown and dry while the centre stays green?"
+   }
+  }
+ },
+ {
+  "state": "Information about the control of brown plant hopper in rice crop?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_LEAFFOLDER": "rice leaf folder: leaves folded lengthwise and tied, with white scraped streaks inside, green caterpillar inside the fold",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are leaves folded lengthwise with white streaks where the green is scraped off?"
+   }
+  }
+ },
+ {
+  "state": "Information about yellow rust disease Control in wheat crop?",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "Provide information related to gundhi bug insect management in paddy crop.",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_K_DEF": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "C_MG_DEF": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "C_P_DEF": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the edges of the older leaves brown and dry while the centre stays green?"
+   }
+  }
+ },
+ {
+  "state": "Information about false smut disease in paddy crop.....?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "information about green leafhopper insect control our paddy crop",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BLAST": "rice blast: diamond or eye-shaped spots with grey centre and brown border on leaves, neck of the panicle turns black and breaks",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the spots spindle or eye-shaped with a grey centre and brown edge?"
+   }
+  }
+ },
+ {
+  "state": "Bacterial Leaf Blight in Paddy Crop?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "information about blight control and potato...?",
+  "crop": "potato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_WHITEFLY": "whitefly: tiny white flies fly up when the plant is shaken, leaves yellow and sticky; spreads leaf curl virus",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do tiny white flies fly up when you shake the plant?"
+   }
+  }
+ },
+ {
+  "state": "information about control of termites in wheat crop ?",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_K_DEF": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "C_MG_DEF": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "C_P_DEF": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the edges of the older leaves brown and dry while the centre stays green?"
+   }
+  }
+ },
+ {
+  "state": "Give information about blast disease control in paddy crop...?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_FALSE_SMUT": "false smut: individual rice grains replaced by yellow-orange to greenish-black velvety balls on the earhead",
+     "D_SHEATH_BLIGHT": "sheath blight: oval grey-green lesions with brown borders on the leaf sheath near the water line, spreading upward like a snake skin",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are some grains turned into yellow or dark green velvety balls?"
+   }
+  }
+ },
+ {
+  "state": "Information about leaf folder insect control in paddy crop ?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "information about control of white fly in tomato?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_EARLY_BLIGHT": "early blight: dark brown spots with concentric target rings on older lower leaves first, yellow around the spots",
+     "D_LATE_BLIGHT": "late blight: large water-soaked dark patches spreading fast on leaves and stems in cool foggy humid weather, white mould under the leaf, whole field can collapse in days",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the spots have rings inside like a target, on the older leaves first?"
+   }
+  }
+ },
+ {
+  "state": "Information about control of late blight in potato ?",
+  "crop": "potato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "Information about fruit borer control in tomato crop?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_WHITEFLY": "whitefly: tiny white flies fly up when the plant is shaken, leaves yellow and sticky; spreads leaf curl virus",
+     "V_TOLCV": "tomato leaf curl virus: young leaves small, curled upward and crinkled, yellow edges, bushy stunted plants with few flowers, whiteflies present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do tiny white flies fly up when you shake the plant?"
+   }
+  }
+ },
+ {
+  "state": "--Information about the control of Stem borer in Paddy",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_PADDY_STEMBORER": "rice stem borer: dead hearts in tillers during vegetative stage or white empty earheads (white ear) after flowering that pull out easily",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are there white, empty earheads that pull out easily?"
+   }
+  }
+ },
+ {
+  "state": "Which is insecticide can be used to control of leaf curling in Tomato crop ..?",
+  "crop": "tomato",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_FRUITBORER": "fruit borer: round holes in green fruits with the caterpillar half inside, rotting fruits, greenish caterpillars with stripes",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are there round holes in fruits with a caterpillar's body sticking out?"
+   }
+  }
+ },
+ {
+  "state": "Information about the control of Gundhi bugs in Paddy crop.?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_N_DEF": "nitrogen shortage: older lower leaves uniformly pale yellow from the tip along the midrib, whole crop pale and slow, needs urea",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the yellowing start on the older, lower leaves?"
+   }
+  }
+ },
+ {
+  "state": "Give information about the bacterial leaf blight disease control of the Paddy crop.",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_FALSE_SMUT": "false smut: individual rice grains replaced by yellow-orange to greenish-black velvety balls on the earhead",
+     "D_SHEATH_BLIGHT": "sheath blight: oval grey-green lesions with brown borders on the leaf sheath near the water line, spreading upward like a snake skin",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are some grains turned into yellow or dark green velvety balls?"
+   }
+  }
+ },
+ {
+  "state": "Information about Sheath Blight in paddy Crop..?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_PADDY_STEMBORER": "rice stem borer: dead hearts in tillers during vegetative stage or white empty earheads (white ear) after flowering that pull out easily",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are there white, empty earheads that pull out easily?"
+   }
+  }
+ },
+ {
+  "state": "Information about the control of Blast disease in Paddy crop..?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BLAST": "rice blast: diamond or eye-shaped spots with grey centre and brown border on leaves, neck of the panicle turns black and breaks",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the spots spindle or eye-shaped with a grey centre and brown edge?"
+   }
+  }
+ },
+ {
+  "state": "Information about Stem borer insect control in Paddy crop ..?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "Dhaan ki fasal me khaira rog ke niyantran ke lie kya kare ...?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_K_DEF": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "C_MG_DEF": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "C_P_DEF": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the edges of the older leaves brown and dry while the centre stays green?"
+   }
+  }
+ },
+ {
+  "state": "Give information about of stem Borer insect control in Maize Crop ?",
+  "crop": "maize",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_DROUGHT": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Do the plants droop in the afternoon but look fine in the early morning?"
+   }
+  }
+ },
+ {
+  "state": "Which is fungicide can be used to control of Sheath blight in Paddy crop ..?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HERBICIDE": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Was anything sprayed on or near this field in the last week?"
+   }
+  }
+ },
+ {
+  "state": "ASKED ABOUT TO GRASS HOPPER CONTROL IN PADDY ?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_FE_DEF": "iron shortage: youngest leaves pale yellow to white with sharply green veins, common in high-pH or waterlogged soils and in hydroponics with high pH",
+     "C_S_DEF": "sulphur shortage: whole young leaves uniformly pale yellow-green including the veins, common in mustard, pulses and sandy soils",
+     "C_ZN_DEF": "zinc shortage: young leaves with rusty brown spots or white bands near the base (khaira in paddy, white bud in maize), stunted plants with short internodes",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are the youngest leaves yellow-white with clearly green veins?"
+   }
+  }
+ },
+ {
+  "state": "Information about control of Gundhi bug in paddy",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "M_CHEMICAL": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves",
+     "M_CROP": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_EXCESS_SALT": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Did the burning start within a few days of applying fertiliser?"
+   }
+  }
+ },
+ {
+  "state": "Information about Blast Disease control in paddy crop ?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "B_INSECT": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot",
+     "B_FUNGAL": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting",
+     "B_BACTERIAL": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot",
+     "B_VIRAL": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "C_HEAT": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Has it been very hot (above about 38 °C) recently?"
+   }
+  }
+ },
+ {
+  "state": "Yellow Rust in wheat....?",
+  "crop": "wheat",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_LOOSE_SMUT": "loose smut of wheat: earheads come out as black powdery masses instead of grains, the powder blows away leaving a bare stalk",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are whole earheads black powder instead of grain?"
+   }
+  }
+ },
+ {
+  "state": "Information about root aphids control in Paddy crop?",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "N_MOBILE": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves",
+     "N_IMMOBILE": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom",
+     "N_EXCESS": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "P_LEAFFOLDER": "rice leaf folder: leaves folded lengthwise and tied, with white scraped streaks inside, green caterpillar inside the fold",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are leaves folded lengthwise with white streaks where the green is scraped off?"
+   }
+  }
+ },
+ {
+  "state": "Provide information related to the management of bacterial sheath blight disease in paddy crop.",
+  "crop": "paddy",
+  "questions": {
+   "root": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_BIOTIC": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)",
+     "D_NUTRIENT": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)",
+     "D_WATER_CLIMATE": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)",
+     "D_MANAGEMENT": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)",
+     "__normal": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+   },
+   "l2": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "W_EXCESS": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting",
+     "W_DEFICIT": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night",
+     "W_TEMPERATURE": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "cause": {
+    "type": "choice",
+    "instructions": "Which best describes the farmer's crop problem?",
+    "criteria": {
+     "D_FALSE_SMUT": "false smut: individual rice grains replaced by yellow-orange to greenish-black velvety balls on the earhead",
+     "D_SHEATH_BLIGHT": "sheath blight: oval grey-green lesions with brown borders on the leaf sheath near the water line, spreading upward like a snake skin",
+     "__unrelated": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    }
+   },
+   "check": {
+    "type": "noul",
+    "instructions": "Are some grains turned into yellow or dark green velvety balls?"
+   }
+  }
+ }
+]

@@ -1,0 +1,153 @@
+{
+  "_doc": "Deterministic rules: safety interception lexicons (stage 1) and contraindication filters (stage 5). The banned list is a snapshot from Government of India (CIB&RC / Ministry of Agriculture) orders, including the 2018 order banning 18 pesticides and the 2011 endosulfan ban. VERIFY against the current CIB&RC list before release; bans and registrations change.",
+  "banned_actives": {
+    "source": "Govt. of India CIB&RC banned / restricted lists (snapshot; verify current); antibiotics streptomycin + tetracycline banned for crop use from 1 Jan 2024",
+    "actives": [
+      "endosulfan",
+      "benomyl",
+      "carbaryl",
+      "diazinon",
+      "fenarimol",
+      "fenthion",
+      "linuron",
+      "methoxy ethyl mercury chloride",
+      "methyl parathion",
+      "sodium cyanide",
+      "thiometon",
+      "tridemorph",
+      "trifluralin",
+      "alachlor",
+      "dichlorvos",
+      "phorate",
+      "phosphamidon",
+      "triazophos",
+      "trichlorfon",
+      "aldrin",
+      "dieldrin",
+      "ddt",
+      "chlordane",
+      "heptachlor",
+      "lindane",
+      "paraquat dimethyl sulphate",
+      "pentachlorophenol",
+      "monocrotophos (on vegetables)",
+      "streptomycin",
+      "tetracycline",
+      "streptocycline"
+    ]
+  },
+  "pollinator_toxic_actives": [
+    "imidacloprid",
+    "thiamethoxam",
+    "clothianidin",
+    "fipronil",
+    "chlorpyrifos",
+    "lambda-cyhalothrin",
+    "cypermethrin",
+    "deltamethrin",
+    "quinalphos",
+    "profenofos"
+  ],
+  "contraindications": [
+    {
+      "id": "RAIN_SOON",
+      "blocks_tag": "spray",
+      "when": "rain_forecast_24h",
+      "reason_en": "Rain is expected within 24 h: a spray now will wash off. Wait for a dry window.",
+      "reason_hi": "24 घंटे में बारिश की संभावना है: अभी छिड़काव धुल जाएगा। सूखे मौसम का इंतज़ार करें।"
+    },
+    {
+      "id": "WINDY",
+      "blocks_tag": "spray",
+      "when": "wind_high",
+      "reason_en": "Too windy to spray safely (drift onto you and neighbouring crops).",
+      "reason_hi": "छिड़काव के लिए हवा बहुत तेज़ है (दवा उड़कर आप पर व पड़ोसी फसल पर जाएगी)।"
+    },
+    {
+      "id": "NEAR_HARVEST",
+      "blocks_tag": "chemical",
+      "when": "near_harvest",
+      "reason_en": "Close to harvest: chemical residues may remain on the produce (pre-harvest interval). Use non-chemical options.",
+      "reason_hi": "कटाई नज़दीक है: उपज पर दवा के अवशेष रह सकते हैं। गैर-रासायनिक उपाय अपनाएँ।"
+    },
+    {
+      "id": "HYDROPONIC",
+      "blocks_tag": "soil_only",
+      "when": "hydroponic",
+      "reason_en": "Soil-based advice does not apply to a hydroponic setup.",
+      "reason_hi": "मिट्टी वाली सलाह हाइड्रोपोनिक खेती पर लागू नहीं होती।"
+    },
+    {
+      "id": "SOIL_FARM",
+      "blocks_tag": "hydro_only",
+      "when": "not_hydroponic",
+      "reason_en": "Nutrient-solution advice only applies to hydroponic setups.",
+      "reason_hi": "पोषक घोल की सलाह सिर्फ हाइड्रोपोनिक के लिए है।"
+    },
+    {
+      "id": "WATERLOGGED",
+      "blocks_tag": "irrigate",
+      "when": "waterlogged",
+      "reason_en": "The field/reservoir already has plenty of water: do not irrigate more.",
+      "reason_hi": "खेत/टंकी में पहले से पर्याप्त पानी है: और सिंचाई न करें।"
+    },
+    {
+      "id": "N_WHILE_WATERLOGGED",
+      "blocks_tag": "nitrogen_add",
+      "when": "waterlogged",
+      "reason_en": "Drain first: urea added to waterlogged soil is mostly lost and roots cannot take it up.",
+      "reason_hi": "पहले पानी निकालें: जलभराव में डाला यूरिया ज़्यादातर बेकार जाता है।"
+    },
+    {
+      "id": "N_LATE_CEREAL",
+      "blocks_tag": "nitrogen_add",
+      "when": "cereal_after_flowering",
+      "reason_en": "Nitrogen after flowering in cereals gives little yield benefit and increases lodging and disease.",
+      "reason_hi": "अनाज फसलों में फूल आने के बाद नाइट्रोजन से उपज कम बढ़ती है, गिरना व रोग बढ़ते हैं।"
+    },
+    {
+      "id": "FLOWERING_BEES",
+      "blocks_active_list": "pollinator_toxic_actives",
+      "when": "flowering",
+      "reason_en": "Crop is flowering: avoid bee-toxic insecticides ({actives}); if unavoidable spray late evening.",
+      "reason_hi": "फसल में फूल हैं: मधुमक्खियों के लिए ज़हरीले कीटनाशी ({actives}) से बचें; ज़रूरी हो तो शाम को छिड़कें।"
+    },
+    {
+      "id": "BANNED",
+      "blocks_active_list": "banned_actives",
+      "when": "always",
+      "reason_en": "{actives} is banned or restricted in India: never use it.",
+      "reason_hi": "{actives} भारत में प्रतिबंधित है: इसका प्रयोग न करें।"
+    }
+  ],
+  "safety": {
+    "_doc": "Stage 1 lexicons (lowercase substrings or regex). Matched before any model runs.",
+    "poisoning": {
+      "patterns": [
+        "\\b(dawa|dava|pesticide|keetnashak|spray|chhidkav)\\b.{0,40}\\b(chakkar|ulti|vomit|behosh|unconscious|saans|breath|faint|dizzy|poison|zeher)",
+        "(chakkar|ulti|vomit|behosh|unconscious|saans nahi|faint|dizzy).{0,40}(dawa|dava|pesticide|spray|chhidkav|keetnashak)",
+        "(pi li|pi liya|kha li|kha liya|drank|swallowed).{0,30}(dawa|dava|pesticide|keetnashak|zeher|poison)",
+        "दवा.{0,30}(चक्कर|उल्टी|बेहोश|सांस)",
+        "(ज़हर|जहर|कीटनाशक).{0,20}(पी|खा)"
+      ],
+      "en": "This may be pesticide poisoning. Move the person to fresh air, remove contaminated clothes, wash skin with soap and water, do NOT make them vomit, and call 108 (ambulance) now. Take the pesticide container to the hospital.",
+      "hi": "यह कीटनाशक विषाक्तता हो सकती है। व्यक्ति को खुली हवा में ले जाएँ, दूषित कपड़े उतारें, त्वचा साबुन-पानी से धोएँ, उल्टी न कराएँ और तुरंत 108 (एम्बुलेंस) पर फोन करें। दवा का डिब्बा अस्पताल ले जाएँ।"
+    },
+    "distress": {
+      "patterns": [
+        "\\b(suicide|kill myself|end my life|want to die|marna chahta|marna chahti|mar jaunga|mar jaungi|jaan de|khudkushi|atmahatya)\\b",
+        "(आत्महत्या|मर जाऊँ|मर जाना|जान दे|खुदकुशी)"
+      ],
+      "en": "You are not alone. Please talk to someone now: Tele-MANAS 14416 (free, 24x7, Hindi and other languages). For crop-loss relief, your bank and PMFBY crop insurance can help.",
+      "hi": "आप अकेले नहीं हैं। अभी किसी से बात करें: टेली-मानस 14416 (निःशुल्क, 24x7, हिंदी में)। फसल नुकसान के लिए बैंक और प्रधानमंत्री फसल बीमा योजना मदद कर सकते हैं।"
+    },
+    "outbreak": {
+      "patterns": [
+        "\\b(locust|tiddi|टिड्डी)\\b",
+        "(swarm|jhund|dal).{0,20}(keede|keet|insects|tiddi)"
+      ],
+      "en": "A locust or swarm outbreak must be reported immediately to your district agriculture officer / KVK; it can destroy many villages' crops in days.",
+      "hi": "टिड्डी दल या झुंड की सूचना तुरंत ज़िला कृषि अधिकारी / KVK को दें; यह कुछ ही दिनों में कई गाँवों की फसल नष्ट कर सकता है।"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "crop": "maize",
+  "display_name": "Maize (corn)",
+  "notes": [
+    "Stage targets are starting points compiled from general hydroponic maize guidance.",
+    "The biology team must verify/adjust these, then the ML optimizer refines them from logged data.",
+    "dataset_envelope comes from analysis/analyze_dataset.py (5th-95th percentile of the Kaggle maize rows)."
+  ],
+  "lights_on_hour": 6,
+  "stages": [
+    {
+      "name": "germination",
+      "start_day": 0,
+      "end_day": 7,
+      "air_temp_c": [25, 30],
+      "humidity_pct": [70, 85],
+      "ph": [5.8, 6.3],
+      "ec_ms_cm": [0.0, 0.5],
+      "light_hours": 0,
+      "spectrum": "none - seeds germinate in the dark",
+      "biology": "Seed imbibes water; radicle then coleoptile emerge. Keep warm and moist, plain water or very dilute solution."
+    },
+    {
+      "name": "seedling",
+      "start_day": 8,
+      "end_day": 21,
+      "air_temp_c": [21, 27],
+      "humidity_pct": [65, 75],
+      "ph": [5.8, 6.3],
+      "ec_ms_cm": [0.8, 1.2],
+      "light_hours": 16,
+      "spectrum": "blue-heavy (~30-40% blue) for compact stems",
+      "biology": "V1-V4 leaf stages. Roots establishing; low nutrient demand, sensitive to salt burn."
+    },
+    {
+      "name": "vegetative",
+      "start_day": 22,
+      "end_day": 55,
+      "air_temp_c": [21, 30],
+      "humidity_pct": [55, 70],
+      "ph": [5.8, 6.5],
+      "ec_ms_cm": [1.4, 2.0],
+      "light_hours": 16,
+      "spectrum": "balanced blue/red, full-spectrum white",
+      "biology": "V5-VT. Rapid biomass gain, high nitrogen demand, water uptake rises sharply."
+    },
+    {
+      "name": "reproductive",
+      "start_day": 56,
+      "end_day": 70,
+      "air_temp_c": [20, 28],
+      "humidity_pct": [50, 65],
+      "ph": [5.8, 6.5],
+      "ec_ms_cm": [1.8, 2.4],
+      "light_hours": 14,
+      "spectrum": "red-heavy (~70% red) to support tasseling/silking",
+      "biology": "VT/R1 tasseling and silking. Heat >35 C or very high humidity hurts pollen; peak water demand."
+    },
+    {
+      "name": "grain_fill",
+      "start_day": 71,
+      "end_day": 110,
+      "air_temp_c": [18, 26],
+      "humidity_pct": [50, 65],
+      "ph": [5.8, 6.5],
+      "ec_ms_cm": [1.6, 2.2],
+      "light_hours": 13,
+      "spectrum": "red-heavy",
+      "biology": "R2-R6 kernel fill to maturity. Potassium and phosphorus demand high; water uptake tapers."
+    }
+  ]
+}

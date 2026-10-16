@@ -1,0 +1,104 @@
+{
+  "_doc": "Causes valid for every crop (hosts ['*']). `desc` = Laya option text. `criteria` = L5 yes/no checks used for clarification questions. `photo` = expected vision.py signals; `conditions` = weather/sensor conditions that make the cause more likely; `advice` = DAG edges to kb/strategies.json with evidence state (Supp, Part, Uncert, Unk, Contra).",
+  "causes": [
+    {"id": "C_N_DEF", "hosts": ["*"], "syndromes": ["S_N"], "name_en": "Nitrogen deficiency", "name_hi": "नाइट्रोजन की कमी",
+     "desc": "nitrogen shortage: older lower leaves uniformly pale yellow from the tip along the midrib, whole crop pale and slow, needs urea",
+     "criteria": [{"id": "old_leaves_first", "en": "Did the yellowing start on the older, lower leaves?", "hi": "क्या पीलापन नीचे की पुरानी पत्तियों से शुरू हुआ?"},
+                  {"id": "v_from_tip", "en": "Does the yellow run from the leaf tip down the middle (V shape)?", "hi": "क्या पीलापन पत्ती की नोक से बीच की नस के साथ (V आकार में) है?"}],
+     "photo": {"yellow_frac": "high", "dgci": "low"}, "conditions": {"waterlogged": "against"},
+     "advice": [{"s": "CHK_DRAIN_FIRST", "ev": "Supp"}, {"s": "CHK_LEAF_POSITION", "ev": "Supp"}, {"s": "NUT_UREA_SPLIT", "ev": "Supp"}, {"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_P_DEF", "hosts": ["*"], "syndromes": ["S_PK_MG"], "name_en": "Phosphorus deficiency", "name_hi": "फॉस्फोरस की कमी",
+     "desc": "phosphorus shortage: young plants stunted with purple or reddish older leaves, worse in cold soil early in the season",
+     "criteria": [{"id": "purple_old", "en": "Are the older leaves or stems purple or reddish?", "hi": "क्या पुरानी पत्तियाँ या तना बैंगनी/लाल हैं?"},
+                  {"id": "cold_young", "en": "Is the crop young and has the weather been cold?", "hi": "क्या फसल छोटी है और मौसम ठंडा रहा है?"}],
+     "photo": {"purple_frac": "high"}, "conditions": {"cold": "for"},
+     "advice": [{"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "NUT_PHOSPHORUS", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_K_DEF", "hosts": ["*"], "syndromes": ["S_PK_MG"], "name_en": "Potassium deficiency", "name_hi": "पोटाश की कमी",
+     "desc": "potassium shortage: edges and tips of older leaves turn yellow then brown and scorched, weak stems and lodging",
+     "criteria": [{"id": "edge_scorch", "en": "Are the edges of the older leaves brown and dry while the centre stays green?", "hi": "क्या पुरानी पत्तियों के किनारे भूरे-सूखे हैं और बीच का भाग हरा है?"}],
+     "photo": {"brown_frac": "medium"}, "conditions": {},
+     "advice": [{"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "NUT_POTASH", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_MG_DEF", "hosts": ["*"], "syndromes": ["S_PK_MG"], "name_en": "Magnesium deficiency", "name_hi": "मैग्नीशियम की कमी",
+     "desc": "magnesium shortage: yellow between green veins on older leaves (striped or marbled), sometimes reddish",
+     "criteria": [{"id": "interveinal_old", "en": "Are the veins green with yellow between them on the older leaves?", "hi": "क्या पुरानी पत्तियों पर नसें हरी और बीच का भाग पीला है?"}],
+     "photo": {"yellow_frac": "medium"}, "conditions": {},
+     "advice": [{"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "NUT_MAGNESIUM", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_ZN_DEF", "hosts": ["*"], "syndromes": ["S_MICRO"], "name_en": "Zinc deficiency (khaira)", "name_hi": "जिंक की कमी (खैरा)",
+     "desc": "zinc shortage: young leaves with rusty brown spots or white bands near the base (khaira in paddy, white bud in maize), stunted plants with short internodes",
+     "criteria": [{"id": "young_leaves", "en": "Are the new, younger leaves affected first?", "hi": "क्या नई पत्तियाँ पहले प्रभावित हुईं?"},
+                  {"id": "rusty_white", "en": "Are there rusty brown patches or broad white bands on the leaves?", "hi": "क्या पत्तियों पर कत्थई धब्बे या चौड़ी सफेद पट्टियाँ हैं?"}],
+     "photo": {"yellow_frac": "medium", "brown_frac": "medium"}, "conditions": {},
+     "advice": [{"s": "CHK_LEAF_POSITION", "ev": "Supp"}, {"s": "NUT_ZINC", "ev": "Supp"}, {"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_FE_DEF", "hosts": ["*"], "syndromes": ["S_MICRO"], "name_en": "Iron deficiency", "name_hi": "आयरन की कमी",
+     "desc": "iron shortage: youngest leaves pale yellow to white with sharply green veins, common in high-pH or waterlogged soils and in hydroponics with high pH",
+     "criteria": [{"id": "young_green_veins", "en": "Are the youngest leaves yellow-white with clearly green veins?", "hi": "क्या सबसे नई पत्तियाँ पीली-सफेद और नसें साफ हरी हैं?"}],
+     "photo": {"yellow_frac": "high"}, "conditions": {"ph_high": "for"},
+     "advice": [{"s": "NUT_IRON", "ev": "Supp"}, {"s": "CHK_SOILTEST", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_S_DEF", "hosts": ["*"], "syndromes": ["S_MICRO"], "name_en": "Sulphur deficiency", "name_hi": "सल्फर की कमी",
+     "desc": "sulphur shortage: whole young leaves uniformly pale yellow-green including the veins, common in mustard, pulses and sandy soils",
+     "criteria": [{"id": "young_uniform", "en": "Are the young leaves evenly pale, veins included?", "hi": "क्या नई पत्तियाँ नसों सहित एक समान हल्की पीली हैं?"}],
+     "photo": {"yellow_frac": "medium", "dgci": "low"}, "conditions": {},
+     "advice": [{"s": "NUT_SULPHUR", "ev": "Supp"}, {"s": "CHK_SOILTEST", "ev": "Supp"}]},
+
+    {"id": "C_EXCESS_SALT", "hosts": ["*"], "syndromes": ["S_EXCESS"], "name_en": "Fertiliser burn / salt excess", "name_hi": "खाद की अधिकता / लवण",
+     "desc": "too much fertiliser or salty water: leaf tips and edges burnt brown soon after heavy fertiliser, white crust on soil, very high EC in nutrient solution",
+     "criteria": [{"id": "after_fert", "en": "Did the burning start within a few days of applying fertiliser?", "hi": "क्या खाद डालने के कुछ दिन में ही पत्तियाँ जलीं?"}],
+     "photo": {"brown_frac": "medium"}, "conditions": {"ec_high": "for"},
+     "advice": [{"s": "CUL_NO_EXCESS_N", "ev": "Supp"}, {"s": "CUL_IRRIGATE_LIGHT", "ev": "Part"}, {"s": "CUL_HYDRO_FLUSH", "ev": "Supp"}, {"s": "CHK_SOILTEST", "ev": "Supp"}]},
+
+    {"id": "C_WATERLOG", "hosts": ["*"], "syndromes": ["S_WATERLOG"], "name_en": "Waterlogging", "name_hi": "जलभराव",
+     "desc": "waterlogging: whole field or low patches turned yellow after heavy rain or over-irrigation with standing water, roots brown or black",
+     "criteria": [{"id": "standing_water", "en": "Has water been standing in the field for more than a day recently?", "hi": "क्या हाल में खेत में एक दिन से ज़्यादा पानी भरा रहा?"},
+                  {"id": "low_patches", "en": "Is it worse in the low-lying parts of the field?", "hi": "क्या खेत के निचले हिस्से में ज़्यादा असर है?"}],
+     "photo": {"yellow_frac": "high"}, "conditions": {"waterlogged": "for", "heavy_rain": "for"},
+     "advice": [{"s": "CUL_DRAIN", "ev": "Supp"}, {"s": "NUT_UREA_SPLIT", "ev": "Part"}, {"s": "CHK_SCOUT", "ev": "Supp"}]},
+
+    {"id": "C_DROUGHT", "hosts": ["*"], "syndromes": ["S_DROUGHT"], "name_en": "Moisture stress", "name_hi": "नमी की कमी",
+     "desc": "drought or missed irrigation: leaves rolled or drooping in the afternoon and recovering at night, dry cracked soil",
+     "criteria": [{"id": "recovers_night", "en": "Do the plants droop in the afternoon but look fine in the early morning?", "hi": "क्या दोपहर में पौधे मुरझाते हैं और सुबह ठीक दिखते हैं?"}],
+     "photo": {}, "conditions": {"dry": "for", "hot": "for"},
+     "advice": [{"s": "CUL_IRRIGATE_LIGHT", "ev": "Supp"}, {"s": "CUL_MULCH", "ev": "Supp"}, {"s": "CUL_HYDRO_SOLUTION", "ev": "Supp"}]},
+
+    {"id": "C_FROST", "hosts": ["*"], "syndromes": ["S_HEAT_COLD"], "name_en": "Frost / cold injury (pala)", "name_hi": "पाला",
+     "desc": "frost or cold injury: leaves suddenly water-soaked then black or bleached after a very cold clear night in winter (pala)",
+     "criteria": [{"id": "after_cold_night", "en": "Did it appear suddenly after a very cold night?", "hi": "क्या यह बहुत ठंडी रात के बाद अचानक दिखा?"}],
+     "photo": {"brown_frac": "high"}, "conditions": {"cold": "for"},
+     "advice": [{"s": "CUL_FROST_IRRIGATE", "ev": "Supp"}, {"s": "ESC_INSURANCE", "ev": "Supp"}]},
+
+    {"id": "C_HEAT", "hosts": ["*"], "syndromes": ["S_HEAT_COLD", "S_FLOWER_FRUIT"], "name_en": "Heat stress (loo)", "name_hi": "लू / गर्मी का असर",
+     "desc": "heat stress: leaf scorching, flower and fruit drop and poor grain setting during very hot dry winds (loo) above about 35 to 40 degrees",
+     "criteria": [{"id": "hot_spell", "en": "Has it been very hot (above about 38 °C) recently?", "hi": "क्या हाल में बहुत गर्मी (लगभग 38 °C से ज़्यादा) रही?"}],
+     "photo": {"brown_frac": "medium"}, "conditions": {"hot": "for"},
+     "advice": [{"s": "CUL_SHADE_HEAT", "ev": "Supp"}, {"s": "CUL_IRRIGATE_LIGHT", "ev": "Supp"}, {"s": "CUL_HYDRO_COOL_AIR", "ev": "Supp"}]},
+
+    {"id": "C_HAIL_STORM", "hosts": ["*"], "syndromes": ["S_HEAT_COLD"], "name_en": "Hail or storm damage", "name_hi": "ओले / आंधी से नुकसान",
+     "desc": "hail or storm: leaves torn and shredded, bruised fruits, plants bent or lodged after a storm",
+     "criteria": [{"id": "after_storm", "en": "Did a hailstorm or strong storm happen just before this?", "hi": "क्या ठीक पहले ओले या तेज़ आंधी आई थी?"}],
+     "photo": {}, "conditions": {},
+     "advice": [{"s": "ESC_INSURANCE", "ev": "Supp"}, {"s": "CUL_REMOVE_INFECTED", "ev": "Part"}, {"s": "CHK_SCOUT", "ev": "Supp"}]},
+
+    {"id": "C_HERBICIDE", "hosts": ["*"], "syndromes": ["S_HERBICIDE"], "name_en": "Herbicide / spray injury", "name_hi": "खरपतवारनाशी / दवा से नुकसान",
+     "desc": "herbicide or spray injury: bleached, twisted or burnt leaves a few days after spraying, following the spray path or drift from a neighbour",
+     "criteria": [{"id": "after_spray", "en": "Was anything sprayed on or near this field in the last week?", "hi": "क्या पिछले हफ्ते इस खेत में या पास में कोई दवा छिड़की गई?"}],
+     "photo": {"yellow_frac": "medium"}, "conditions": {},
+     "advice": [{"s": "CUL_IRRIGATE_LIGHT", "ev": "Part"}, {"s": "CHK_SAMPLE_KVK", "ev": "Supp"}]},
+
+    {"id": "C_NORMAL_SENESCENCE", "hosts": ["*"], "syndromes": ["NORMAL"], "name_en": "Normal ageing of lower leaves", "name_hi": "निचली पत्तियों का सामान्य रूप से पकना",
+     "desc": "normal: only the oldest bottom leaves yellow and dry while the crop is filling grain or near maturity; the rest of the plant is healthy",
+     "criteria": [{"id": "near_maturity", "en": "Is the crop at grain filling or close to harvest?", "hi": "क्या फसल दाना भरने या कटाई के नज़दीक है?"},
+                  {"id": "only_bottom", "en": "Are only the bottom 1-3 leaves affected, the rest green?", "hi": "क्या सिर्फ नीचे की 1-3 पत्तियाँ प्रभावित हैं और बाकी हरी हैं?"}],
+     "photo": {}, "conditions": {"late_stage": "for"},
+     "advice": [{"s": "CHK_NORMAL", "ev": "Supp"}]},
+
+    {"id": "C_NORMAL_HEALTHY", "hosts": ["*"], "syndromes": ["NORMAL"], "name_en": "Healthy crop", "name_hi": "स्वस्थ फसल",
+     "desc": "healthy: green, growing well, at most a few cosmetic marks; the farmer only wants reassurance or general tips",
+     "criteria": [], "photo": {"verdict": "healthy"}, "conditions": {},
+     "advice": [{"s": "CHK_NORMAL", "ev": "Supp"}, {"s": "CHK_SCOUT", "ev": "Supp"}]}
+  ]
+}

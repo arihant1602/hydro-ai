@@ -1,0 +1,432 @@
+{
+  "_doc": "Advice nodes (the DAG's strategy layer). `kind` orders the IPM ladder: check -> cultural -> mechanical -> biological -> nutrient -> chemical -> escalate. `tags` drive the contraindication engine (advisor/advice_graph.py). Chemical strategies name only the active ingredient, never a dose: the farmer must use the label dose registered for that crop (CIB&RC) or ask the KVK. `actives` are checked against kb/rules.json banned list.",
+  "strategies": [
+    {
+      "id": "CHK_SCOUT",
+      "kind": "check",
+      "tags": [],
+      "en": "Walk the field in a W pattern and check 20 plants: count how many show the problem before acting.",
+      "hi": "खेत में W आकार में घूमकर 20 पौधे देखें: कितने पौधों में समस्या है, गिनें, फिर ही उपाय करें।"
+    },
+    {
+      "id": "CHK_SOILTEST",
+      "kind": "check",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Get a soil test (Soil Health Card) to confirm which nutrient is short before adding more.",
+      "hi": "कौन सा पोषक तत्व कम है यह जानने के लिए मिट्टी की जाँच (सॉयल हेल्थ कार्ड) कराएँ।"
+    },
+    {
+      "id": "CHK_SAMPLE_KVK",
+      "kind": "escalate",
+      "tags": [],
+      "en": "Take a few affected plants in a paper bag to your nearest Krishi Vigyan Kendra (KVK) or call Kisan Call Centre 1800-180-1551.",
+      "hi": "प्रभावित पौधे कागज़ के थैले में नज़दीकी कृषि विज्ञान केंद्र (KVK) ले जाएँ या किसान कॉल सेंटर 1800-180-1551 पर फोन करें।"
+    },
+    {
+      "id": "CHK_DRAIN_FIRST",
+      "kind": "check",
+      "tags": [],
+      "en": "Check drainage first: if water has been standing, the yellowing may be waterlogging, not a lack of fertiliser.",
+      "hi": "पहले जल निकासी देखें: अगर पानी भरा रहा है तो पीलापन खाद की कमी से नहीं, जलभराव से हो सकता है।"
+    },
+    {
+      "id": "CHK_LEAF_POSITION",
+      "kind": "check",
+      "tags": [],
+      "en": "Note which leaves are affected: old lower leaves point to nitrogen/potassium/magnesium; young top leaves point to zinc/iron/sulphur.",
+      "hi": "देखें कौन सी पत्तियाँ प्रभावित हैं: नीचे की पुरानी पत्तियाँ = नाइट्रोजन/पोटाश/मैग्नीशियम; ऊपर की नई पत्तियाँ = जिंक/आयरन/सल्फर।"
+    },
+    {
+      "id": "CHK_NORMAL",
+      "kind": "check",
+      "tags": [],
+      "en": "This looks normal for the crop's age. No treatment is needed; keep watching once a week.",
+      "hi": "यह फसल की उम्र के हिसाब से सामान्य लगता है। किसी उपचार की ज़रूरत नहीं; हफ्ते में एक बार देखते रहें।"
+    },
+    {
+      "id": "CUL_DRAIN",
+      "kind": "cultural",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Drain standing water and open field channels; let the topsoil breathe before the next irrigation.",
+      "hi": "खड़ा पानी निकालें, नालियाँ खोलें; अगली सिंचाई से पहले मिट्टी को सूखने दें।"
+    },
+    {
+      "id": "CUL_IRRIGATE_LIGHT",
+      "kind": "cultural",
+      "tags": [
+        "irrigate",
+        "soil_only"
+      ],
+      "en": "Give a light irrigation in the morning or evening; avoid letting the soil crack.",
+      "hi": "सुबह या शाम हल्की सिंचाई करें; मिट्टी फटने न दें।"
+    },
+    {
+      "id": "CUL_FROST_IRRIGATE",
+      "kind": "cultural",
+      "tags": [
+        "irrigate",
+        "soil_only"
+      ],
+      "en": "When frost (pala) is forecast, give a light irrigation in the evening; moist soil keeps the crop warmer.",
+      "hi": "पाला पड़ने की संभावना हो तो शाम को हल्की सिंचाई करें; नम मिट्टी फसल को गर्म रखती है।"
+    },
+    {
+      "id": "CUL_REMOVE_INFECTED",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Pick off and destroy badly infected leaves or plants away from the field (do not leave them on the bunds).",
+      "hi": "ज़्यादा रोगग्रस्त पत्तियाँ/पौधे तोड़कर खेत से दूर नष्ट करें (मेड़ पर न छोड़ें)।"
+    },
+    {
+      "id": "CUL_RESIDUE",
+      "kind": "cultural",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "After harvest, plough in or remove crop residue so the disease does not carry over to the next crop.",
+      "hi": "कटाई के बाद फसल अवशेष हटाएँ या जुताई करके दबाएँ ताकि रोग अगली फसल में न जाए।"
+    },
+    {
+      "id": "CUL_ROTATE",
+      "kind": "cultural",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Rotate with a non-host crop next season (e.g. a pulse) to break the pest/disease cycle.",
+      "hi": "अगले मौसम में दूसरी फसल (जैसे दलहन) लगाएँ ताकि कीट/रोग का चक्र टूटे।"
+    },
+    {
+      "id": "CUL_AIRFLOW",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Improve airflow: wider spacing, remove lower touching leaves, irrigate at the base not over the leaves.",
+      "hi": "हवा का बहाव बढ़ाएँ: दूरी रखें, ज़मीन छूती निचली पत्तियाँ हटाएँ, पत्तियों पर नहीं जड़ में पानी दें।"
+    },
+    {
+      "id": "CUL_RESISTANT_VAR",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Next season, sow a resistant/tolerant variety recommended for your district (ask KVK or seed office).",
+      "hi": "अगले मौसम में अपने ज़िले के लिए अनुशंसित रोग-प्रतिरोधी किस्म बोएँ (KVK या बीज भंडार से पूछें)।"
+    },
+    {
+      "id": "CUL_SEED_TREAT",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Treat seed or seed tubers before the next sowing (biological agent or registered seed-treatment fungicide).",
+      "hi": "अगली बुवाई से पहले बीज/कंद उपचार करें (जैविक या पंजीकृत बीजोपचार दवा से)।"
+    },
+    {
+      "id": "CUL_WEED",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Keep the field and bunds weed-free; weeds host pests and compete for nutrients.",
+      "hi": "खेत और मेड़ों को खरपतवार मुक्त रखें; खरपतवार कीटों को पनाह देते हैं।"
+    },
+    {
+      "id": "CUL_NO_EXCESS_N",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Stop extra urea for now; too much nitrogen makes the crop soft and attracts pests and disease.",
+      "hi": "अभी अतिरिक्त यूरिया न डालें; ज़्यादा नाइट्रोजन से फसल कोमल होती है और कीट-रोग बढ़ते हैं।"
+    },
+    {
+      "id": "CUL_MULCH",
+      "kind": "cultural",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Mulch around plants (straw or plastic) to keep soil moisture even.",
+      "hi": "पौधों के चारों ओर पलवार (भूसा या प्लास्टिक) बिछाएँ ताकि नमी बराबर रहे।"
+    },
+    {
+      "id": "CUL_EVEN_WATER",
+      "kind": "cultural",
+      "tags": [],
+      "en": "Water evenly and regularly; alternating dry and wet spells causes fruit and tip disorders.",
+      "hi": "नियमित और समान सिंचाई करें; कभी सूखा कभी ज़्यादा पानी से फल व सिरे की समस्याएँ होती हैं।"
+    },
+    {
+      "id": "CUL_EARTH_UP",
+      "kind": "cultural",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Earth up the rows so tubers stay covered (prevents greening and pest entry).",
+      "hi": "मेड़ों पर मिट्टी चढ़ाएँ ताकि कंद ढके रहें (हरापन व कीट से बचाव)।"
+    },
+    {
+      "id": "CUL_SHADE_HEAT",
+      "kind": "cultural",
+      "tags": [],
+      "en": "During heat waves irrigate in the evening and use shade net for nurseries and vegetables if available.",
+      "hi": "लू के समय शाम को सिंचाई करें, नर्सरी व सब्ज़ियों पर छाया जाल लगाएँ।"
+    },
+    {
+      "id": "CUL_HYDRO_SOLUTION",
+      "kind": "cultural",
+      "tags": [
+        "hydro_only"
+      ],
+      "en": "Check the nutrient solution: adjust EC and pH to the stage targets on the dashboard and top up the reservoir.",
+      "hi": "पोषक घोल जाँचें: डैशबोर्ड के लक्ष्य अनुसार EC और pH ठीक करें और टंकी भरें।"
+    },
+    {
+      "id": "CUL_HYDRO_FLUSH",
+      "kind": "cultural",
+      "tags": [
+        "hydro_only"
+      ],
+      "en": "Salt build-up: replace part of the nutrient solution with fresh water and bring EC back to the stage target.",
+      "hi": "लवण जमा है: पोषक घोल का कुछ भाग साफ पानी से बदलें और EC को लक्ष्य पर लाएँ।"
+    },
+    {
+      "id": "CUL_HYDRO_COOL_AIR",
+      "kind": "cultural",
+      "tags": [
+        "hydro_only"
+      ],
+      "en": "Increase ventilation (fan) and lower humidity around the plants; wet leaves spread fungal disease.",
+      "hi": "पंखे से हवा बढ़ाएँ और नमी कम करें; गीली पत्तियों से फफूंद फैलती है।"
+    },
+    {
+      "id": "MECH_HANDPICK",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Hand-pick and destroy egg masses and larvae in the morning; collect and destroy damaged shoots or fruits.",
+      "hi": "सुबह अंडों के गुच्छे और सुंडियाँ हाथ से चुनकर नष्ट करें; प्रभावित तने/फल तोड़कर नष्ट करें।"
+    },
+    {
+      "id": "MECH_PHEROMONE",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Install pheromone traps (about 5 per acre) to monitor and mass-trap moths.",
+      "hi": "फेरोमोन ट्रैप (लगभग 5 प्रति एकड़) लगाएँ ताकि पतंगों की निगरानी और पकड़ हो।"
+    },
+    {
+      "id": "MECH_LIGHT_TRAP",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Use a light trap at night to catch adult moths and hoppers.",
+      "hi": "रात में प्रकाश प्रपंच (लाइट ट्रैप) लगाएँ ताकि पतंगे व फुदके पकड़े जाएँ।"
+    },
+    {
+      "id": "MECH_YELLOW_STICKY",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Hang yellow sticky traps at crop height for whiteflies and aphids (blue traps for thrips).",
+      "hi": "सफेद मक्खी व माहू के लिए फसल की ऊँचाई पर पीले चिपचिपे ट्रैप लगाएँ (थ्रिप्स के लिए नीले)।"
+    },
+    {
+      "id": "MECH_SAND_WHORL",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Put a pinch of sand or soil-ash mix into the maize whorl to deter fall armyworm larvae.",
+      "hi": "मक्का के गोभ में चुटकी भर रेत या राख-मिट्टी डालें ताकि फॉल आर्मीवर्म की सुंडी भागे।"
+    },
+    {
+      "id": "MECH_BIRD_PERCH",
+      "kind": "mechanical",
+      "tags": [],
+      "en": "Put up bird perches (T-shaped sticks, ~10 per acre) so birds eat caterpillars.",
+      "hi": "खेत में T आकार की चिड़िया बैठने की खूँटियाँ (~10 प्रति एकड़) लगाएँ ताकि पक्षी सुंडियाँ खाएँ।"
+    },
+    {
+      "id": "MECH_DRAIN_HOPPER",
+      "kind": "mechanical",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "For hoppers, drain the paddy field for 3-4 days and part the plants into alleys so air and light reach the base.",
+      "hi": "फुदकों के लिए धान के खेत का पानी 3-4 दिन निकाल दें और पौधों के बीच रास्ते बनाएँ।"
+    },
+    {
+      "id": "BIO_NEEM",
+      "kind": "biological",
+      "tags": [
+        "spray"
+      ],
+      "en": "Spray neem oil / azadirachtin (as per label) on early infestations; repeat after 7-10 days.",
+      "hi": "शुरुआती प्रकोप पर नीम तेल / एज़ाडिरेक्टिन (लेबल अनुसार) छिड़कें; 7-10 दिन बाद दोहराएँ।"
+    },
+    {
+      "id": "BIO_TRICHO_CARD",
+      "kind": "biological",
+      "tags": [],
+      "en": "Release Trichogramma egg parasitoid cards (from KVK / bio-control lab) against borers and fruit borers.",
+      "hi": "तना/फल छेदक के लिए ट्राइकोग्रामा कार्ड (KVK/जैव नियंत्रण प्रयोगशाला से) लगाएँ।"
+    },
+    {
+      "id": "BIO_BT",
+      "kind": "biological",
+      "tags": [
+        "spray"
+      ],
+      "en": "Spray Bacillus thuringiensis (Bt) or a registered biopesticide on young caterpillars.",
+      "hi": "छोटी सुंडियों पर बैसिलस थुरिंजिएन्सिस (Bt) या पंजीकृत जैव-कीटनाशी छिड़कें।"
+    },
+    {
+      "id": "BIO_TRICHODERMA",
+      "kind": "biological",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Apply Trichoderma mixed with compost to soil or seed against soil-borne rots and wilts.",
+      "hi": "मिट्टी/बीज जनित सड़न व उकठा के लिए ट्राइकोडर्मा को गोबर खाद में मिलाकर डालें।"
+    },
+    {
+      "id": "BIO_PSEUDOMONAS",
+      "kind": "biological",
+      "tags": [
+        "spray"
+      ],
+      "en": "Spray or seed-treat with Pseudomonas fluorescens (registered bio-formulation) against leaf blights.",
+      "hi": "पत्ती झुलसा के लिए स्यूडोमोनास फ्लोरेसेंस (पंजीकृत जैव उत्पाद) का छिड़काव/बीजोपचार करें।"
+    },
+    {
+      "id": "NUT_UREA_SPLIT",
+      "kind": "nutrient",
+      "tags": [
+        "nitrogen_add"
+      ],
+      "en": "Top-dress nitrogen (urea) in split doses as per your state recommendation, when the soil is moist; foliar urea spray can give a quick green-up.",
+      "hi": "राज्य की अनुशंसा अनुसार यूरिया की टॉप ड्रेसिंग किस्तों में, नम मिट्टी में करें; यूरिया का पर्णीय छिड़काव जल्दी हरापन लाता है।"
+    },
+    {
+      "id": "NUT_ZINC",
+      "kind": "nutrient",
+      "tags": [
+        "spray"
+      ],
+      "en": "Correct zinc deficiency with zinc sulphate (soil application or foliar spray with lime, as per KVK recommendation).",
+      "hi": "जिंक की कमी के लिए जिंक सल्फेट (मिट्टी में या चूने के साथ पर्णीय छिड़काव, KVK अनुशंसा अनुसार) दें।"
+    },
+    {
+      "id": "NUT_IRON",
+      "kind": "nutrient",
+      "tags": [
+        "spray"
+      ],
+      "en": "For iron chlorosis spray ferrous sulphate (with citric acid) on young leaves; avoid over-irrigation and very high pH.",
+      "hi": "आयरन की कमी के लिए नई पत्तियों पर फेरस सल्फेट (साइट्रिक एसिड के साथ) छिड़कें; अधिक सिंचाई व अधिक pH से बचें।"
+    },
+    {
+      "id": "NUT_SULPHUR",
+      "kind": "nutrient",
+      "tags": [
+        "soil_only"
+      ],
+      "en": "Apply sulphur (gypsum or bentonite sulphur) at the recommended rate, especially for oilseeds and pulses.",
+      "hi": "अनुशंसित मात्रा में सल्फर (जिप्सम या बेंटोनाइट सल्फर) दें, खासकर तिलहन व दलहन में।"
+    },
+    {
+      "id": "NUT_POTASH",
+      "kind": "nutrient",
+      "tags": [],
+      "en": "Apply potash (MOP/SOP) as per soil test; potassium also improves resistance to lodging and disease.",
+      "hi": "मिट्टी जाँच अनुसार पोटाश (MOP/SOP) दें; पोटाश से गिरना व रोग भी कम होते हैं।"
+    },
+    {
+      "id": "NUT_PHOSPHORUS",
+      "kind": "nutrient",
+      "tags": [],
+      "en": "Phosphorus shortage shows early: next sowing apply DAP/SSP at sowing as per soil test; cold soil also blocks P uptake temporarily.",
+      "hi": "फॉस्फोरस की कमी जल्दी दिखती है: अगली बुवाई पर मिट्टी जाँच अनुसार DAP/SSP दें; ठंडी मिट्टी में भी P अस्थायी रूप से नहीं मिलता।"
+    },
+    {
+      "id": "NUT_MAGNESIUM",
+      "kind": "nutrient",
+      "tags": [
+        "spray"
+      ],
+      "en": "Spray magnesium sulphate on leaves for interveinal yellowing of old leaves (as per KVK recommendation).",
+      "hi": "पुरानी पत्तियों की नसों के बीच पीलेपन पर मैग्नीशियम सल्फेट का पर्णीय छिड़काव करें (KVK अनुशंसा अनुसार)।"
+    },
+    {
+      "id": "NUT_CALCIUM",
+      "kind": "nutrient",
+      "tags": [
+        "spray"
+      ],
+      "en": "For blossom-end rot: keep watering even, avoid excess nitrogen/potash, and spray calcium (calcium chloride/nitrate) as recommended.",
+      "hi": "फल के निचले सिरे की सड़न: सिंचाई समान रखें, अधिक नाइट्रोजन/पोटाश न दें, अनुशंसा अनुसार कैल्शियम छिड़कें।"
+    },
+    {
+      "id": "NUT_BORON",
+      "kind": "nutrient",
+      "tags": [
+        "spray"
+      ],
+      "en": "Spray boron (borax/solubor) at low dose at flowering if soil test shows boron shortage; excess is toxic.",
+      "hi": "मिट्टी जाँच में बोरॉन कम हो तो फूल आने पर कम मात्रा में बोरॉन छिड़कें; अधिक मात्रा हानिकारक है।"
+    },
+    {
+      "id": "CHEM_INSECTICIDE",
+      "kind": "chemical",
+      "tags": [
+        "spray",
+        "chemical"
+      ],
+      "en": "If the pest crosses the economic threshold, spray an insecticide registered for this pest on this crop (e.g. {actives}). Use the label dose only.",
+      "hi": "अगर कीट आर्थिक क्षति स्तर से ऊपर है तो इस फसल व कीट के लिए पंजीकृत कीटनाशी (जैसे {actives}) का लेबल अनुसार छिड़काव करें।"
+    },
+    {
+      "id": "CHEM_FUNGICIDE",
+      "kind": "chemical",
+      "tags": [
+        "spray",
+        "chemical"
+      ],
+      "en": "Spray a fungicide registered for this disease on this crop (e.g. {actives}) at the first signs, especially before rainy spells. Use the label dose only.",
+      "hi": "रोग के शुरुआती लक्षण पर, खासकर बारिश से पहले, इस फसल व रोग के लिए पंजीकृत फफूंदनाशी (जैसे {actives}) लेबल अनुसार छिड़कें।"
+    },
+    {
+      "id": "CHEM_BACTERICIDE",
+      "kind": "chemical",
+      "tags": [
+        "spray",
+        "chemical"
+      ],
+      "en": "Bacterial disease: chemicals only slow it; a registered copper product (e.g. {actives}) may be used as per label, together with removing infected plants.",
+      "hi": "जीवाणु रोग में दवा सिर्फ फैलाव धीमा करती है; पंजीकृत कॉपर उत्पाद (जैसे {actives}) लेबल अनुसार, संक्रमित पौधे हटाने के साथ प्रयोग करें।"
+    },
+    {
+      "id": "CHEM_SOIL_INSECTICIDE",
+      "kind": "chemical",
+      "tags": [
+        "chemical",
+        "soil_only"
+      ],
+      "en": "For soil pests, use a registered soil insecticide or seed treatment (e.g. {actives}) as per label, ideally at sowing.",
+      "hi": "मिट्टी के कीटों के लिए पंजीकृत मृदा कीटनाशी या बीजोपचार (जैसे {actives}) लेबल अनुसार, बेहतर है बुवाई के समय दें।"
+    },
+    {
+      "id": "CHEM_VECTOR",
+      "kind": "chemical",
+      "tags": [
+        "spray",
+        "chemical"
+      ],
+      "en": "Viruses cannot be cured; control the insect vector early with a registered insecticide (e.g. {actives}) and remove infected plants.",
+      "hi": "वायरस का इलाज नहीं है; रोग फैलाने वाले कीट को जल्दी पंजीकृत कीटनाशी (जैसे {actives}) से रोकें और संक्रमित पौधे हटाएँ।"
+    },
+    {
+      "id": "ESC_REPORT_OUTBREAK",
+      "kind": "escalate",
+      "tags": [],
+      "en": "This pest can spread fast across fields: inform your KVK / block agriculture officer so they can warn neighbours.",
+      "hi": "यह कीट तेज़ी से फैलता है: अपने KVK / ब्लॉक कृषि अधिकारी को सूचित करें ताकि आस-पास के किसान सचेत हों।"
+    },
+    {
+      "id": "ESC_INSURANCE",
+      "kind": "escalate",
+      "tags": [],
+      "en": "For hail, storm, flood or frost losses, take photos and inform your bank/insurance (PMFBY) within 72 hours.",
+      "hi": "ओले, आंधी, बाढ़ या पाले से नुकसान हो तो फोटो लें और 72 घंटे के भीतर बैंक/बीमा (PMFBY) को सूचित करें।"
+    }
+  ]
+}

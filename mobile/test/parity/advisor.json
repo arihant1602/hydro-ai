@@ -1,0 +1,517 @@
+[
+ {
+  "text": "makka ke patte peele ho rahe hain",
+  "form": {
+   "crop": "maize",
+   "day": 40
+  },
+  "photo": {
+   "verdict": "needs attention",
+   "yellow_frac": 0.22,
+   "lesion_frac": 0.01,
+   "lesions": 1,
+   "brown_frac": 0.02,
+   "purple_frac": 0.0,
+   "dgci": 0.41
+  },
+  "sensors": {
+   "air_temp": 31.0,
+   "humidity": 84.0,
+   "ph": 6.1,
+   "ec": 1.1
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "maize",
+   "stage": "vegetative",
+   "likely": [
+    {
+     "id": "C_N_DEF",
+     "name": "Nitrogen deficiency",
+     "score": 37.8,
+     "agreement": "1/4 evidence channels"
+    },
+    {
+     "id": "C_S_DEF",
+     "name": "Sulphur deficiency",
+     "score": 37.2,
+     "agreement": "1/4 evidence channels"
+    },
+    {
+     "id": "C_FE_DEF",
+     "name": "Iron deficiency",
+     "score": 34.1,
+     "agreement": "1/4 evidence channels"
+    }
+   ],
+   "confidence": "low",
+   "questions": [
+    {
+     "id": "old_leaves_first",
+     "for": "C_N_DEF",
+     "en": "Did the yellowing start on the older, lower leaves?",
+     "hi": "क्या पीलापन नीचे की पुरानी पत्तियों से शुरू हुआ?"
+    },
+    {
+     "id": "young_uniform",
+     "for": "C_S_DEF",
+     "en": "Are the young leaves evenly pale, veins included?",
+     "hi": "क्या नई पत्तियाँ नसों सहित एक समान हल्की पीली हैं?"
+    }
+   ],
+   "actions": [
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_DRAIN_FIRST",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Check drainage first: if water has been standing, the yellowing may be waterlogging, not a lack of fertiliser."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_LEAF_POSITION",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Note which leaves are affected: old lower leaves point to nitrogen/potassium/magnesium; young top leaves point to zinc/iron/sulphur."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_SOILTEST",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Get a soil test (Soil Health Card) to confirm which nutrient is short before adding more."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "NUT_UREA_SPLIT",
+     "kind": "nutrient",
+     "evidence": "Supp",
+     "text": "Top-dress nitrogen (urea) in split doses as per your state recommendation, when the soil is moist; foliar urea spray can give a quick green-up."
+    },
+    {
+     "cause": "C_S_DEF",
+     "strategy": "NUT_SULPHUR",
+     "kind": "nutrient",
+     "evidence": "Supp",
+     "text": "Apply sulphur (gypsum or bentonite sulphur) at the recommended rate, especially for oilseeds and pulses."
+    },
+    {
+     "cause": null,
+     "strategy": "CHK_SAMPLE_KVK",
+     "kind": "escalate",
+     "evidence": "Supp",
+     "text": "Take a few affected plants in a paper bag to your nearest Krishi Vigyan Kendra (KVK) or call Kisan Call Centre 1800-180-1551."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+photo",
+    "complaint+context",
+    "all"
+   ],
+   "notifiable": false,
+   "router_calls": 10
+  }
+ },
+ {
+  "text": "leaves turning yellow from the tip",
+  "form": {
+   "crop": "wheat",
+   "day": 50
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "wheat",
+   "stage": "vegetative",
+   "likely": [
+    {
+     "id": "C_N_DEF",
+     "name": "Nitrogen deficiency",
+     "score": 118.7,
+     "agreement": "2/2 evidence channels"
+    }
+   ],
+   "confidence": "high",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_DRAIN_FIRST",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Check drainage first: if water has been standing, the yellowing may be waterlogging, not a lack of fertiliser."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_LEAF_POSITION",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Note which leaves are affected: old lower leaves point to nitrogen/potassium/magnesium; young top leaves point to zinc/iron/sulphur."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "CHK_SOILTEST",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Get a soil test (Soil Health Card) to confirm which nutrient is short before adding more."
+    },
+    {
+     "cause": "C_N_DEF",
+     "strategy": "NUT_UREA_SPLIT",
+     "kind": "nutrient",
+     "evidence": "Supp",
+     "text": "Top-dress nitrogen (urea) in split doses as per your state recommendation, when the soil is moist; foliar urea spray can give a quick green-up."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": false,
+   "router_calls": 8
+  }
+ },
+ {
+  "text": "long grey tan lesions on maize leaves after humid weather",
+  "form": {
+   "crop": "maize",
+   "day": 45,
+   "weather": [
+    "humid"
+   ]
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "maize",
+   "stage": "vegetative",
+   "likely": [
+    {
+     "id": "D_TLB",
+     "name": "Turcicum (northern) leaf blight",
+     "score": 125.9,
+     "agreement": "2/2 evidence channels"
+    },
+    {
+     "id": "C_HERBICIDE",
+     "name": "Herbicide / spray injury",
+     "score": 0.3,
+     "agreement": "0/2 evidence channels"
+    }
+   ],
+   "confidence": "high",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "D_TLB",
+     "strategy": "CUL_RESISTANT_VAR",
+     "kind": "cultural",
+     "evidence": "Supp",
+     "text": "Next season, sow a resistant/tolerant variety recommended for your district (ask KVK or seed office)."
+    },
+    {
+     "cause": "D_TLB",
+     "strategy": "CUL_RESIDUE",
+     "kind": "cultural",
+     "evidence": "Supp",
+     "text": "After harvest, plough in or remove crop residue so the disease does not carry over to the next crop."
+    },
+    {
+     "cause": "D_TLB",
+     "strategy": "CUL_REMOVE_INFECTED",
+     "kind": "cultural",
+     "evidence": "Part",
+     "text": "Pick off and destroy badly infected leaves or plants away from the field (do not leave them on the bunds)."
+    },
+    {
+     "cause": "D_TLB",
+     "strategy": "CHEM_FUNGICIDE",
+     "kind": "chemical",
+     "evidence": "Supp",
+     "text": "Spray a fungicide registered for this disease on this crop (e.g. mancozeb, azoxystrobin + difenoconazole) at the first signs, especially before rainy spells. Use the label dose only."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": false,
+   "router_calls": 8
+  }
+ },
+ {
+  "text": "caterpillar eating the whorl, sawdust like frass",
+  "form": {
+   "crop": "maize",
+   "day": 30
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "maize",
+   "stage": "vegetative",
+   "likely": [
+    {
+     "id": "P_FAW",
+     "name": "Fall armyworm",
+     "score": 121.3,
+     "agreement": "2/2 evidence channels"
+    }
+   ],
+   "confidence": "high",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "P_FAW",
+     "strategy": "CHK_SCOUT",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Walk the field in a W pattern and check 20 plants: count how many show the problem before acting."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "MECH_PHEROMONE",
+     "kind": "mechanical",
+     "evidence": "Supp",
+     "text": "Install pheromone traps (about 5 per acre) to monitor and mass-trap moths."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "MECH_SAND_WHORL",
+     "kind": "mechanical",
+     "evidence": "Part",
+     "text": "Put a pinch of sand or soil-ash mix into the maize whorl to deter fall armyworm larvae."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "MECH_BIRD_PERCH",
+     "kind": "mechanical",
+     "evidence": "Part",
+     "text": "Put up bird perches (T-shaped sticks, ~10 per acre) so birds eat caterpillars."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "BIO_BT",
+     "kind": "biological",
+     "evidence": "Supp",
+     "text": "Spray Bacillus thuringiensis (Bt) or a registered biopesticide on young caterpillars."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "BIO_NEEM",
+     "kind": "biological",
+     "evidence": "Part",
+     "text": "Spray neem oil / azadirachtin (as per label) on early infestations; repeat after 7-10 days."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "CHEM_INSECTICIDE",
+     "kind": "chemical",
+     "evidence": "Supp",
+     "text": "If the pest crosses the economic threshold, spray an insecticide registered for this pest on this crop (e.g. emamectin benzoate, chlorantraniliprole, spinetoram). Use the label dose only."
+    },
+    {
+     "cause": "P_FAW",
+     "strategy": "ESC_REPORT_OUTBREAK",
+     "kind": "escalate",
+     "evidence": "Supp",
+     "text": "This pest can spread fast across fields: inform your KVK / block agriculture officer so they can warn neighbours."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": true,
+   "router_calls": 8
+  }
+ },
+ {
+  "text": "tomato leaves have brown spots with rings",
+  "form": {
+   "crop": "tomato",
+   "day": 60,
+   "rain_forecast": true
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "tomato",
+   "stage": "flowering",
+   "likely": [
+    {
+     "id": "C_NORMAL_HEALTHY",
+     "name": "Healthy crop",
+     "score": 3.8,
+     "agreement": "0/2 evidence channels"
+    },
+    {
+     "id": "C_NORMAL_SENESCENCE",
+     "name": "Normal ageing of lower leaves",
+     "score": -11.2,
+     "agreement": "0/2 evidence channels"
+    }
+   ],
+   "confidence": "medium",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "C_NORMAL_HEALTHY",
+     "strategy": "CHK_NORMAL",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "This looks normal for the crop's age. No treatment is needed; keep watching once a week."
+    },
+    {
+     "cause": "C_NORMAL_HEALTHY",
+     "strategy": "CHK_SCOUT",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Walk the field in a W pattern and check 20 plants: count how many show the problem before acting."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": false,
+   "router_calls": 4
+  }
+ },
+ {
+  "text": "plants look healthy and green",
+  "form": {
+   "crop": "maize",
+   "day": 20
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "maize",
+   "stage": "establish",
+   "likely": [
+    {
+     "id": "C_NORMAL_HEALTHY",
+     "name": "Healthy crop",
+     "score": 138.6,
+     "agreement": "2/2 evidence channels"
+    },
+    {
+     "id": "C_NORMAL_SENESCENCE",
+     "name": "Normal ageing of lower leaves",
+     "score": 39.5,
+     "agreement": "1/2 evidence channels"
+    }
+   ],
+   "confidence": "high",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "C_NORMAL_HEALTHY",
+     "strategy": "CHK_NORMAL",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "This looks normal for the crop's age. No treatment is needed; keep watching once a week."
+    },
+    {
+     "cause": "C_NORMAL_HEALTHY",
+     "strategy": "CHK_SCOUT",
+     "kind": "check",
+     "evidence": "Supp",
+     "text": "Walk the field in a W pattern and check 20 plants: count how many show the problem before acting."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": false,
+   "router_calls": 4
+  }
+ },
+ {
+  "text": "what is the mandi price of wheat",
+  "form": {
+   "crop": "wheat"
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "wheat",
+   "unrelated": true,
+   "message": "This doesn't look like a crop problem. Describe what you see on the plants (leaves, stem, fruit, insects) or add a photo.",
+   "router_calls": 2
+  }
+ },
+ {
+  "text": "I drank pesticide by mistake",
+  "form": {
+   "crop": "maize"
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": {
+    "kind": "poisoning",
+    "halt": true,
+    "message": "This may be pesticide poisoning. Move the person to fresh air, remove contaminated clothes, wash skin with soap and water, do NOT make them vomit, and call 108 (ambulance) now. Take the pesticide container to the hospital."
+   }
+  }
+ },
+ {
+  "text": "leaves purple in cold nights",
+  "form": {
+   "crop": "maize",
+   "day": 15,
+   "weather": [
+    "cold"
+   ],
+   "hydroponic": true
+  },
+  "result": {
+   "router": "lexical-baseline",
+   "safety": null,
+   "crop": "maize",
+   "stage": "establish",
+   "likely": [
+    {
+     "id": "C_FROST",
+     "name": "Frost / cold injury (pala)",
+     "score": 119.0,
+     "agreement": "2/2 evidence channels"
+    },
+    {
+     "id": "C_P_DEF",
+     "name": "Phosphorus deficiency",
+     "score": 63.2,
+     "agreement": "1/2 evidence channels"
+    }
+   ],
+   "confidence": "high",
+   "questions": [],
+   "actions": [
+    {
+     "cause": "C_FROST",
+     "strategy": "ESC_INSURANCE",
+     "kind": "escalate",
+     "evidence": "Supp",
+     "text": "For hail, storm, flood or frost losses, take photos and inform your bank/insurance (PMFBY) within 72 hours."
+    }
+   ],
+   "avoid": [],
+   "evidence_used": [
+    "complaint",
+    "complaint+context"
+   ],
+   "notifiable": false,
+   "router_calls": 8
+  }
+ }
+]

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hydro AI</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Hydro AI <span id="crop" class="muted"></span></h1>
+    <div class="muted" id="stageline">waiting for data…</div>
+  </div>
+  <div id="online" class="pill">—</div>
+</header>
+
+<main>
+  <section id="alerts"></section>
+
+  <section class="panel link" id="linkpanel">
+    <div class="linkhead">
+      <div class="linkstate">
+        <span class="dot" id="linkdot"></span>
+        <div>
+          <div class="linktitle" id="linktitle">Waiting for ESP32…</div>
+          <div class="muted small" id="linkage">no packets yet</div>
+        </div>
+      </div>
+      <div class="ledctl">
+        <button id="ledbtn" type="button">💡 Blink LED</button>
+        <span class="muted small" id="ledmsg"></span>
+      </div>
+      <div class="flow" aria-hidden="true">
+        <span>ESP32</span><span class="wire"><i id="pkt-up"></i><i id="pkt-down"></i></span><span>Server</span>
+      </div>
+    </div>
+    <div class="linkstats" id="linkstats"></div>
+    <details id="trafficbox" open>
+      <summary>Live traffic</summary>
+      <table class="traffic"><thead><tr><th>Time</th><th>ESP32 → server</th><th>Server → ESP32</th></tr></thead>
+        <tbody id="traffic"></tbody></table>
+    </details>
+  </section>
+
+  <section class="grid" id="cards"></section>
+
+  <section class="grid two">
+    <div class="panel">
+      <h2>ML setpoints</h2>
+      <div id="rec"></div>
+      <p class="muted small" id="recnote"></p>
+    </div>
+    <div class="panel">
+      <h2>Actuators</h2>
+      <div id="acts" class="acts"></div>
+      <h2 style="margin-top:1.2rem">Dataset suitability</h2>
+      <div id="suit"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="row">
+      <h2>Live</h2>
+      <select id="hours">
+        <option value="6">6 h</option><option value="24" selected>24 h</option>
+        <option value="72">3 days</option><option value="168">7 days</option>
+      </select>
+    </div>
+    <div class="charts">
+      <div><canvas id="c_climate"></canvas></div>
+      <div><canvas id="c_water"></canvas></div>
+      <div id="chem_wrap" hidden><canvas id="c_chem"></canvas></div>
+    </div>
+  </section>
+
+  <section class="panel" id="advisorpanel">
+    <h2>Ask about my crop</h2>
+    <form id="askform" class="askform">
+      <textarea id="asktext" rows="2" placeholder="e.g. lower leaves turning yellow from the tip / makka ke patte peele ho rahe hain"></textarea>
+      <div class="askrow">
+        <select id="askcrop"><option value="">crop: auto</option><option>maize</option><option>paddy</option><option>wheat</option><option>tomato</option><option>potato</option></select>
+        <input id="askday" type="number" min="0" max="200" placeholder="days since sowing">
+        <label class="chk"><input type="checkbox" id="askphoto" checked> use latest photo</label>
+        <label class="chk"><input type="checkbox" id="asksensors" checked> use sensors</label>
+        <label class="chk"><input type="checkbox" id="askrain"> rain expected</label>
+        <select id="asklang"><option value="en">English</option><option value="hi">हिंदी</option></select>
+        <button>Ask</button>
+      </div>
+      <div class="askrow small muted">Recent weather:
+        <label class="chk"><input type="checkbox" value="heavy_rain" class="wx"> heavy rain</label>
+        <label class="chk"><input type="checkbox" value="humid" class="wx"> humid/foggy</label>
+        <label class="chk"><input type="checkbox" value="hot" class="wx"> very hot</label>
+        <label class="chk"><input type="checkbox" value="cold" class="wx"> cold</label>
+        <label class="chk"><input type="checkbox" value="frost" class="wx"> frost</label>
+        <label class="chk"><input type="checkbox" value="dry" class="wx"> dry</label>
+      </div>
+    </form>
+    <div id="askresult"></div>
+  </section>
+
+  <section class="panel">
+    <div class="row"><h2>Plant camera</h2><span class="muted small" id="camcount"></span></div>
+    <div class="cam">
+      <div class="camlatest" id="camlatest"><div class="muted small">No photos yet. Scan the QR code with your phone to use it as the camera.</div></div>
+      <div class="camside">
+        <img id="camqr" alt="QR code for the phone camera page" width="150" height="150">
+        <div class="small"><a id="camlink" target="_blank">Open camera page</a></div>
+        <div class="muted small">Scan with your phone (same WiFi). Accept the certificate warning once.</div>
+      </div>
+    </div>
+    <div class="camstrip" id="camstrip"></div>
+    <div class="charts" id="canopywrap" hidden><div class="wide"><canvas id="c_canopy"></canvas></div></div>
+    <p class="muted small">Analysis runs on this PC with colour-based plant-health measures (no cloud). It needs even, white-ish
+      light and the plant filling a good part of the frame. Keep the phone in one spot so canopy % tracks growth.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Growth: daily water uptake vs conditions</h2>
+    <div class="charts"><div class="wide"><canvas id="c_daily"></canvas></div></div>
+  </section>
+
+  <section class="grid two">
+    <div class="panel">
+      <h2>Log a plant observation</h2>
+      <form id="obsform">
+        <label>Height (cm) <input type="number" step="0.1" name="height_cm" required></label>
+        <label>Notes <input name="notes" placeholder="e.g. 4th leaf, slight yellowing"></label>
+        <button>Save</button>
+      </form>
+      <ul id="obs" class="small"></ul>
+    </div>
+    <div class="panel">
+      <h2>Stage biology</h2>
+      <p id="bio"></p>
+      <p class="muted small" id="spectrum"></p>
+    </div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

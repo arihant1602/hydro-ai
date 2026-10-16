@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b201d">
+<title>Plant Camera</title>
+<style>
+  :root { --bg: #121614; --panel: #1b201d; --ink: #e6ebe7; --muted: #8d978f; --line: #2b322e;
+    --ok: #2a9d8f; --bad: #d1495b; --accent: #3a7d44; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, sans-serif;
+    padding: 12px 16px calc(16px + env(safe-area-inset-bottom)); }
+  h1 { font-size: 1.1rem; margin: 0; }
+  header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  a { color: var(--ok); }
+  .muted { color: var(--muted); } .small { font-size: .82rem; }
+  .viewer { position: relative; background: #000; border-radius: 12px; overflow: hidden; aspect-ratio: 3 / 4; }
+  video, .viewer img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+  .flash.go { animation: flash .35s ease-out; }
+  @keyframes flash { from { opacity: .8; } to { opacity: 0; } }
+  .badge { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,.55); padding: 3px 9px;
+    border-radius: 99px; font-size: .78rem; }
+  .controls { display: grid; gap: 10px; margin-top: 12px; }
+  button, label.btn { font: inherit; border: 0; border-radius: 10px; padding: 14px; background: var(--accent);
+    color: #fff; text-align: center; cursor: pointer; }
+  button.secondary { background: var(--panel); border: 1px solid var(--line); color: var(--ink); }
+  button:disabled { opacity: .5; }
+  .row { display: flex; gap: 10px; align-items: center; }
+  .row > * { flex: 1; }
+  select { font: inherit; padding: 12px; border-radius: 10px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); }
+  .status { min-height: 1.4em; margin-top: 8px; }
+  .status.err { color: var(--bad); }
+  .warn { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+  .strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 14px; }
+  .strip img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
+  input[type=file] { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🌽 Plant Camera</h1>
+  <a href="/" class="small">Dashboard</a>
+</header>
+
+<div class="warn" id="insecure" hidden>
+  <b>Live camera needs HTTPS.</b>
+  <div class="small muted" id="httpsHint"></div>
+  <div class="small muted" style="margin-top:6px">You can still take single photos with your camera app below.</div>
+</div>
+
+<div class="viewer" id="viewer">
+  <video id="video" playsinline muted autoplay></video>
+  <span class="badge" id="badge">camera off</span>
+  <div class="flash" id="flash"></div>
+</div>
+
+<div class="controls">
+  <div id="liveControls" class="controls">
+    <button id="start">Start camera</button>
+    <button id="snap" disabled>📸 Capture &amp; upload</button>
+    <div class="row">
+      <select id="every">
+        <option value="0">Auto-capture: off</option>
+        <option value="1">every 1 min</option>
+        <option value="5">every 5 min</option>
+        <option value="15">every 15 min</option>
+        <option value="60">every hour</option>
+      </select>
+      <button class="secondary" id="flip" disabled>Flip camera</button>
+    </div>
+    <div class="small muted">Auto-capture keeps the screen on while this page is open. Prop the phone up facing the plants and plug it in.</div>
+  </div>
+  <label class="btn" id="fileBtn">📷 Take photo with camera app<input type="file" accept="image/*" capture="environment" id="file"></label>
+</div>
+<div class="status small" id="status"></div>
+
+<div class="strip" id="strip"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const MAX_SIDE = 1600;           // downscale before upload: plenty for plant-health CV, small over WiFi
+let stream = null, facing = "environment", timer = null, wakeLock = null;
+
+function setStatus(text, err = false) {
+  $("status").textContent = text;
+  $("status").className = "status small" + (err ? " err" : "");
+}
+
+// Resize any image source to a JPEG blob.
+function toJpeg(source, w, h) {
+  const scale = Math.min(1, MAX_SIDE / Math.max(w, h));
+  const c = document.createElement("canvas");
+  c.width = Math.round(w * scale);
+  c.height = Math.round(h * scale);
+  c.getContext("2d").drawImage(source, 0, 0, c.width, c.height);
+  return new Promise((res) => c.toBlob(res, "image/jpeg", 0.85));
+}
+
+async function upload(blob, how) {
+  setStatus("uploading…");
+  try {
+    const r = await fetch(`/api/photos?source=phone-${how}`, { method: "POST", headers: { "Content-Type": "image/jpeg" }, body: blob });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.detail || r.status);
+    setStatus(`✓ saved ${new Date().toLocaleTimeString()} · day ${j.day} (${j.stage}) · analysing on PC…`);
+    loadStrip();
+    // The PC analyses in the background; show its verdict when it's ready.
+    for (let i = 0; i < 10; i++) {
+      await new Promise((r) => setTimeout(r, 700));
+      const latest = (await (await fetch("/api/photos?limit=3")).json()).find((p) => p.id === j.id);
+      if (latest && latest.analysis) {
+        const a = latest.analysis;
+        setStatus(`✓ saved · ${a.verdict}` + (a.issues.length ? ` · ${a.issues[0][1]}` : ""), a.verdict === "needs attention");
+        break;
+      }
+    }
+  } catch (e) {
+    setStatus(`upload failed: ${e.message}`, true);
+  }
+}
+
+async function startCamera() {
+  stopCamera();
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: facing }, width: { ideal: 1920 }, height: { ideal: 1440 } }, audio: false });
+  } catch (e) {
+    setStatus(`camera blocked: ${e.message}. Allow camera access for this site in the browser settings.`, true);
+    return;
+  }
+  $("video").srcObject = stream;
+  $("snap").disabled = $("flip").disabled = false;
+  $("start").textContent = "Stop camera";
+  const s = stream.getVideoTracks()[0].getSettings();
+  $("badge").textContent = `live · ${s.width}×${s.height}`;
+  setStatus("");
+}
+
+function stopCamera() {
+  if (stream) stream.getTracks().forEach((t) => t.stop());
+  stream = null;
+  $("video").srcObject = null;
+  $("snap").disabled = $("flip").disabled = true;
+  $("start").textContent = "Start camera";
+  $("badge").textContent = "camera off";
+}
+
+async function capture(how = "live") {
+  const v = $("video");
+  if (!stream || !v.videoWidth) return;
+  $("flash").classList.remove("go"); void $("flash").offsetWidth; $("flash").classList.add("go");
+  await upload(await toJpeg(v, v.videoWidth, v.videoHeight), how);
+}
+
+async function setAuto(minutes) {
+  clearInterval(timer);
+  timer = null;
+  if (wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
+  if (!minutes) { $("badge").textContent = stream ? "live" : "camera off"; return; }
+  if (!stream) await startCamera();
+  try { wakeLock = await navigator.wakeLock?.request("screen"); } catch (e) { /* not supported: screen may sleep */ }
+  timer = setInterval(() => capture("auto"), minutes * 60000);
+  capture("auto");
+  $("badge").textContent = `● auto every ${minutes} min`;
+}
+
+async function loadStrip() {
+  try {
+    const photos = await (await fetch("/api/photos?limit=8")).json();
+    $("strip").innerHTML = photos.map((p) => `<a href="${p.url}" target="_blank"><img src="${p.url}" alt="day ${p.day}" loading="lazy"></a>`).join("");
+  } catch (e) { /* offline */ }
+}
+
+// Wake locks drop when the tab is hidden; take it back when the user returns.
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && timer && !wakeLock) navigator.wakeLock?.request("screen").then((l) => (wakeLock = l)).catch(() => {});
+});
+
+$("start").onclick = () => (stream ? (setAuto(0), stopCamera(), ($("every").value = "0")) : startCamera());
+$("snap").onclick = () => capture("live");
+$("flip").onclick = () => { facing = facing === "environment" ? "user" : "environment"; startCamera(); };
+$("every").onchange = (e) => setAuto(Number(e.target.value));
+$("file").onchange = async (e) => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const bmp = await createImageBitmap(f);
+  await upload(await toJpeg(bmp, bmp.width, bmp.height), "app");
+  e.target.value = "";
+};
+
+if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) {
+  $("insecure").hidden = false;
+  $("liveControls").hidden = true;
+  $("viewer").hidden = true;
+  fetch("/api/camera-url").then((r) => r.json()).then((u) => {
+    $("httpsHint").innerHTML = u.https ? `Open <a href="${u.https}">${u.https}</a>. When the browser warns about the certificate, tap <i>Advanced → Proceed</i> (it's your own laptop).` : "";
+  });
+}
+loadStrip();
+</script>
+</body>
+</html>

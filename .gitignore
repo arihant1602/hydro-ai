@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+data/*.db
+firmware/.pio/
+firmware/include/secrets.h
+data/photos/
+data/certs/
+models/
+data/kcc/

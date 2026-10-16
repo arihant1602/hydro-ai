@@ -1,0 +1,295 @@
+{
+  "_doc": "Crop-agnostic layers L1-L3 shared by every crop. Each node's `desc` is the option text Laya scores, so it describes what a farmer would SEE, with common Hindi/Hinglish words. Only L4 causes (kb/causes) are crop-specific; they attach to L3 syndromes via `syndromes` and are filtered by host crop.",
+  "anchors": {
+    "unrelated": {
+      "label_en": "Not about a crop problem",
+      "desc": "the message is not about a plant, crop, field or farm problem (greeting, weather report, scheme, market price)"
+    },
+    "normal": {
+      "label_en": "Normal / no real problem",
+      "desc": "the plant is healthy or this is normal for its age and season; no damage, spots, pests or loss of growth (sab theek hai)"
+    }
+  },
+  "nodes": [
+    {
+      "id": "D_BIOTIC",
+      "layer": 1,
+      "parent": null,
+      "label_en": "Pest or disease",
+      "label_hi": "कीट या रोग",
+      "desc": "insects, caterpillars, worms, eggs, holes, eaten leaves, spots, patches or lesions spreading, black or wet rotting patches, powder or mould on leaves, rust, blight, disease (keeda, sundi, illi, rog, dhabbe, phaphoond, jhulsa)"
+    },
+    {
+      "id": "D_NUTRIENT",
+      "layer": 1,
+      "parent": null,
+      "label_en": "Nutrient problem",
+      "label_hi": "पोषक तत्व की समस्या",
+      "desc": "yellowing, pale, purple or striped leaves without insects or spots, poor growth, small grains or fruits, fertiliser and khad questions (urea, DAP, zinc, khaira)"
+    },
+    {
+      "id": "D_WATER_CLIMATE",
+      "layer": 1,
+      "parent": null,
+      "label_en": "Water or weather stress",
+      "label_hi": "पानी या मौसम की मार",
+      "desc": "too much or too little water, waterlogging, drought, drooping in heat, frost, cold, hail, storm, scorching, lodging (paani, sukha, pala, garmi, ole)"
+    },
+    {
+      "id": "D_MANAGEMENT",
+      "layer": 1,
+      "parent": null,
+      "label_en": "Chemical injury or management",
+      "label_hi": "दवा से नुकसान या खेती प्रबंधन",
+      "desc": "damage after spraying weedicide or pesticide, burnt leaves after fertiliser, weeds, flowers or fruits dropping, small tubers, poor germination, wrong sowing (kharpatvar, dawa jalna)"
+    },
+    {
+      "id": "B_INSECT",
+      "layer": 2,
+      "parent": "D_BIOTIC",
+      "label_en": "Insect or mite pest",
+      "label_hi": "कीट",
+      "desc": "visible insects, caterpillars, larvae, aphids, hoppers, whiteflies, mites, borers, frass or sawdust, holes, chewed or rolled leaves, dead central shoot"
+    },
+    {
+      "id": "B_FUNGAL",
+      "layer": 2,
+      "parent": "D_BIOTIC",
+      "label_en": "Fungal disease",
+      "label_hi": "फफूंद रोग",
+      "desc": "spots or lesions that grow, rings in spots, rust-coloured powder, white or grey mould, blight spreading in humid or rainy weather, rotting"
+    },
+    {
+      "id": "B_BACTERIAL",
+      "layer": 2,
+      "parent": "D_BIOTIC",
+      "label_en": "Bacterial disease",
+      "label_hi": "जीवाणु रोग",
+      "desc": "water-soaked or greasy spots, yellow wavy edges from leaf tip, oozing, sudden wilting of green plants, foul-smelling rot"
+    },
+    {
+      "id": "B_VIRAL",
+      "layer": 2,
+      "parent": "D_BIOTIC",
+      "label_en": "Virus disease",
+      "label_hi": "विषाणु रोग",
+      "desc": "mosaic of light and dark green, curled or crinkled leaves, stunted bushy plants, often with whiteflies, aphids or thrips present"
+    },
+    {
+      "id": "N_MOBILE",
+      "layer": 2,
+      "parent": "D_NUTRIENT",
+      "label_en": "Old-leaf deficiency (N, P, K, Mg)",
+      "label_hi": "पुरानी पत्तियों में कमी",
+      "desc": "symptoms start on the older lower leaves: lower leaves yellow from the tip, purple lower leaves, scorched leaf edges, yellow between veins on old leaves"
+    },
+    {
+      "id": "N_IMMOBILE",
+      "layer": 2,
+      "parent": "D_NUTRIENT",
+      "label_en": "New-leaf deficiency (Zn, Fe, S, Ca, B)",
+      "label_hi": "नई पत्तियों में कमी",
+      "desc": "symptoms on the young upper leaves or growing tip: new leaves pale or white, rusty brown patches (khaira), striped young leaves, dying tips, fruit rot at the bottom"
+    },
+    {
+      "id": "N_EXCESS",
+      "layer": 2,
+      "parent": "D_NUTRIENT",
+      "label_en": "Fertiliser excess or salt",
+      "label_hi": "अधिक खाद या लवण",
+      "desc": "too much fertiliser: very dark lush leaves and lodging, or burnt brown leaf edges and tips after heavy fertiliser, salty water, white crust on soil"
+    },
+    {
+      "id": "W_EXCESS",
+      "layer": 2,
+      "parent": "D_WATER_CLIMATE",
+      "label_en": "Too much water",
+      "label_hi": "अधिक पानी",
+      "desc": "standing water, waterlogged field after heavy rain or over-irrigation, whole field turning yellow, roots brown and rotting"
+    },
+    {
+      "id": "W_DEFICIT",
+      "layer": 2,
+      "parent": "D_WATER_CLIMATE",
+      "label_en": "Too little water",
+      "label_hi": "पानी की कमी",
+      "desc": "dry cracked soil, leaves rolling or drooping in the afternoon, missed irrigation, drought, wilting that recovers at night"
+    },
+    {
+      "id": "W_TEMPERATURE",
+      "layer": 2,
+      "parent": "D_WATER_CLIMATE",
+      "label_en": "Heat, cold or storm",
+      "label_hi": "गर्मी, ठंड या आंधी",
+      "desc": "very hot dry wind (loo), frost or cold night (pala), hail, storm, plants fallen over, sun-scorched patches on exposed side"
+    },
+    {
+      "id": "M_CHEMICAL",
+      "layer": 2,
+      "parent": "D_MANAGEMENT",
+      "label_en": "Spray or herbicide injury",
+      "label_hi": "दवा से जलन",
+      "desc": "damage appeared a few days after spraying weedicide, pesticide or a tank mix: burnt spots matching spray drift, twisted leaves, bleached leaves"
+    },
+    {
+      "id": "M_CROP",
+      "layer": 2,
+      "parent": "D_MANAGEMENT",
+      "label_en": "Crop management",
+      "label_hi": "फसल प्रबंधन",
+      "desc": "flower or fruit drop, small fruits or tubers, poor germination, weeds, wrong spacing or sowing time, questions on how to increase yield"
+    },
+    {
+      "id": "S_BORER",
+      "layer": 3,
+      "parent": "B_INSECT",
+      "label_en": "Borer / dead heart",
+      "label_hi": "तना छेदक",
+      "desc": "central shoot dried (dead heart), white empty earheads, holes in stem with sawdust, tunnels inside stem or fruit"
+    },
+    {
+      "id": "S_DEFOLIATOR",
+      "layer": 3,
+      "parent": "B_INSECT",
+      "label_en": "Leaf-eating caterpillar / folder",
+      "label_hi": "पत्ती खाने वाली सुंडी",
+      "desc": "leaves eaten with holes or ragged edges, caterpillars in the whorl, sawdust-like frass, leaves folded or rolled with larva inside, white scraped streaks"
+    },
+    {
+      "id": "S_SUCKING",
+      "layer": 3,
+      "parent": "B_INSECT",
+      "label_en": "Sucking pests",
+      "label_hi": "रस चूसने वाले कीट",
+      "desc": "small insects sucking sap: aphids (mahu/chepa), hoppers, whiteflies, thrips, mites, bugs on grains; leaves curl, sticky honeydew, black sooty mould, hopper burn patches"
+    },
+    {
+      "id": "S_SOIL_PEST",
+      "layer": 3,
+      "parent": "B_INSECT",
+      "label_en": "Soil / root pests",
+      "label_hi": "मिट्टी के कीट",
+      "desc": "plants cut at ground level at night, termites (deemak) hollowing roots, root grubs or weevils, patches of plants drying from the root"
+    },
+    {
+      "id": "S_LEAF_SPOT",
+      "layer": 3,
+      "parent": "B_FUNGAL",
+      "label_en": "Leaf spots / blights",
+      "label_hi": "पत्ती धब्बा / झुलसा",
+      "desc": "spots or long lesions on leaves that join up, brown or grey centres, target rings, leaves drying from spots (jhulsa)"
+    },
+    {
+      "id": "S_RUST_MILDEW",
+      "layer": 3,
+      "parent": "B_FUNGAL",
+      "label_en": "Rust or powdery growth",
+      "label_hi": "रतुआ / चूर्णी",
+      "desc": "yellow, orange or brown powder that rubs off on fingers (ratua), stripes of yellow pustules, white powdery coating, downy growth under leaves"
+    },
+    {
+      "id": "S_ROT_WILT",
+      "layer": 3,
+      "parent": "B_FUNGAL",
+      "label_en": "Rot, wilt or smut",
+      "label_hi": "सड़न, उकठा या कंडुआ",
+      "desc": "stem or sheath rot, plants wilting and dying in patches, black powder replacing grains (smut), yellow-green balls on grains (false smut), rotten tubers or fruits"
+    },
+    {
+      "id": "S_BACT_SPOT",
+      "layer": 3,
+      "parent": "B_BACTERIAL",
+      "label_en": "Bacterial blight or spot",
+      "label_hi": "जीवाणु झुलसा",
+      "desc": "leaves drying from the tip with wavy yellow margin, water-soaked dark spots with yellow halo, milky ooze, sudden wilt"
+    },
+    {
+      "id": "S_VIRUS",
+      "layer": 3,
+      "parent": "B_VIRAL",
+      "label_en": "Leaf curl or mosaic",
+      "label_hi": "पत्ती मरोड़ / मोज़ेक",
+      "desc": "leaves curled upward or downward, crinkled, small, mosaic pattern, plant stunted and bushy, few fruits"
+    },
+    {
+      "id": "S_N",
+      "layer": 3,
+      "parent": "N_MOBILE",
+      "label_en": "Uniform yellowing of old leaves",
+      "label_hi": "पुरानी पत्तियाँ पीली",
+      "desc": "older lower leaves turn uniformly pale yellow starting from the tip along the midrib, whole crop pale and slow, recovers after urea"
+    },
+    {
+      "id": "S_PK_MG",
+      "layer": 3,
+      "parent": "N_MOBILE",
+      "label_en": "Purpling, edge scorch or interveinal yellowing on old leaves",
+      "label_hi": "बैंगनी या किनारे झुलसे",
+      "desc": "older leaves purple or reddish, or leaf edges brown and scorched, or yellow between green veins on lower leaves, weak stems"
+    },
+    {
+      "id": "S_MICRO",
+      "layer": 3,
+      "parent": "N_IMMOBILE",
+      "label_en": "Young-leaf chlorosis or rusty patches",
+      "label_hi": "नई पत्तियाँ पीली / खैरा",
+      "desc": "new upper leaves yellow or white with green veins, broad white bands, rusty brown patches spreading in nursery or field (khaira), short internodes"
+    },
+    {
+      "id": "S_CA_B",
+      "layer": 3,
+      "parent": "N_IMMOBILE",
+      "label_en": "Growing-tip or fruit-end disorders",
+      "label_hi": "फल के निचले सिरे की सड़न",
+      "desc": "black sunken rot at the bottom end of fruits, cracked fruits or stems, dying growing tips, hollow stems"
+    },
+    {
+      "id": "S_EXCESS",
+      "layer": 3,
+      "parent": "N_EXCESS",
+      "label_en": "Overfertilised or salt-burnt",
+      "label_hi": "खाद की अधिकता",
+      "desc": "very dark green soft growth and lodging, more pests, or leaf tips and edges burnt after heavy fertiliser, white salt crust"
+    },
+    {
+      "id": "S_WATERLOG",
+      "layer": 3,
+      "parent": "W_EXCESS",
+      "label_en": "Waterlogging",
+      "label_hi": "जलभराव",
+      "desc": "yellowing of the whole field or low patches after standing water, roots black, plants not growing, sour smell"
+    },
+    {
+      "id": "S_DROUGHT",
+      "layer": 3,
+      "parent": "W_DEFICIT",
+      "label_en": "Drought / moisture stress",
+      "label_hi": "सूखे का असर",
+      "desc": "leaves rolled like a pipe or drooping in the day, soil dry and cracked, grey-green colour, poor grain or fruit filling"
+    },
+    {
+      "id": "S_HEAT_COLD",
+      "layer": 3,
+      "parent": "W_TEMPERATURE",
+      "label_en": "Heat, frost or storm damage",
+      "label_hi": "पाला / लू / ओले",
+      "desc": "leaves blackened or bleached after a cold night (pala), scorched by hot wind (loo), torn by hail, plants lodged by storm, flowers drying"
+    },
+    {
+      "id": "S_HERBICIDE",
+      "layer": 3,
+      "parent": "M_CHEMICAL",
+      "label_en": "Chemical / herbicide injury",
+      "label_hi": "दवा का दुष्प्रभाव",
+      "desc": "bleached, twisted or burnt leaves appearing a few days after a spray, in a pattern following the spray path or near a neighbour's field"
+    },
+    {
+      "id": "S_FLOWER_FRUIT",
+      "layer": 3,
+      "parent": "M_CROP",
+      "label_en": "Flower/fruit drop or small produce",
+      "label_hi": "फूल-फल गिरना / छोटे फल",
+      "desc": "flowers or small fruits falling, tubers or fruits too small, poor fruit set, low yield questions"
+    }
+  ]
+}

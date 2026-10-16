@@ -1,0 +1,6 @@
+config,final_height_cm,height_min,height_max,model_weight,cv_r2
+baseline,102.16,101.81,102.41,0.0,0.0
+ml_basic,100.017,99.61,100.32,0.0,-8.712
+ml_full,100.083,99.77,100.29,0.0,-9.54
+precise_baseline,102.16,101.81,102.41,0.0,0.0
+precise_ml,100.007,99.61,100.32,0.0,-0.681

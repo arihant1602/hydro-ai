@@ -1,0 +1,60 @@
+[
+ {
+  "file": "vision_20261009-012159-260.jpg",
+  "raw": "vision_20261009-012159-260.rgb",
+  "size": [
+   384,
+   512
+  ],
+  "result": {
+   "canopy_pct": 0.09,
+   "green_pct": 0.09,
+   "yellow_frac": 0.0,
+   "brown_frac": 0.0,
+   "purple_frac": 0.0,
+   "lesion_frac": 0.0,
+   "lesions": 0,
+   "dgci": 0.883,
+   "brightness": 0.576,
+   "colour_cast": 0.056,
+   "blown_pct": 0.0,
+   "verdict": "no plant in view",
+   "issues": [
+    [
+     "no_plant",
+     "No plant detected in the frame."
+    ]
+   ],
+   "version": 1
+  }
+ },
+ {
+  "file": "vision__synthetic_leaf.jpg",
+  "raw": "vision__synthetic_leaf.rgb",
+  "size": [
+   512,
+   384
+  ],
+  "result": {
+   "canopy_pct": 10.16,
+   "green_pct": 9.36,
+   "yellow_frac": 0.017,
+   "brown_frac": 0.037,
+   "purple_frac": 0.025,
+   "lesion_frac": 0.054,
+   "lesions": 3,
+   "dgci": 0.563,
+   "brightness": 0.583,
+   "colour_cast": 0.031,
+   "blown_pct": 0.0,
+   "verdict": "needs attention",
+   "issues": [
+    [
+     "lesions",
+     "3 distinct tan/brown patch(es) covering 5% of the leaf. Long cigar-shaped grey-tan lesions point to northern leaf blight; small rusty pustules to common rust. Remove affected leaves, lower humidity, improve airflow."
+    ]
+   ],
+   "version": 1
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+  "_doc": "Crop profiles. Stages use generic keys so rules work for every crop: establish, vegetative, flowering, filling, maturity. Day ranges are typical North-Indian durations from sowing/transplanting (FAO-56 style); adjust per variety. `kcc_names` map Kisan Call Centre crop labels. Adding a crop = one entry here + host ids on its causes.",
+  "crops": {
+    "maize":  {"name_en": "Maize", "name_hi": "मक्का", "synonyms": ["maize", "corn", "makka", "makki", "bhutta", "मक्का", "मक्की"], "kcc_names": ["Maize (Makka)"], "cereal": true,
+               "stages": {"establish": [0, 21], "vegetative": [22, 55], "flowering": [56, 70], "filling": [71, 100], "maturity": [101, 120]}},
+    "paddy":  {"name_en": "Paddy (rice)", "name_hi": "धान", "synonyms": ["paddy", "rice", "dhan", "chawal", "धान", "चावल"], "kcc_names": ["Paddy (Dhan)"], "cereal": true,
+               "stages": {"establish": [0, 25], "vegetative": [26, 65], "flowering": [66, 95], "filling": [96, 120], "maturity": [121, 140]}},
+    "wheat":  {"name_en": "Wheat", "name_hi": "गेहूँ", "synonyms": ["wheat", "gehu", "gehun", "kanak", "गेहूँ", "गेहूं"], "kcc_names": ["Wheat"], "cereal": true,
+               "stages": {"establish": [0, 20], "vegetative": [21, 60], "flowering": [61, 95], "filling": [96, 120], "maturity": [121, 145]}},
+    "tomato": {"name_en": "Tomato", "name_hi": "टमाटर", "synonyms": ["tomato", "tamatar", "टमाटर"], "kcc_names": ["Tomato"], "cereal": false,
+               "stages": {"establish": [0, 25], "vegetative": [26, 50], "flowering": [51, 75], "filling": [76, 120], "maturity": [121, 150]}},
+    "potato": {"name_en": "Potato", "name_hi": "आलू", "synonyms": ["potato", "aalu", "alu", "aloo", "आलू"], "kcc_names": ["Potato"], "cereal": false,
+               "stages": {"establish": [0, 20], "vegetative": [21, 40], "flowering": [41, 60], "filling": [61, 90], "maturity": [91, 115]}}
+  }
+}
